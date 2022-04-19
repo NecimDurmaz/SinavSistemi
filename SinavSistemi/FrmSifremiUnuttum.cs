@@ -13,7 +13,7 @@ namespace SinavSistemi
 {
     public partial class FrmSifremiUnuttum : Form
     {
-        SqlBaglanti bgl = new SqlBaglanti();
+        SqlBaglanti bgl = new SqlBaglanti(); 
         public FrmSifremiUnuttum()
         {
             InitializeComponent();
