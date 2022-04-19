@@ -49,7 +49,6 @@ namespace SinavSistemi
             this.LblD = new System.Windows.Forms.Label();
             this.CevapFalse = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -233,11 +232,11 @@ namespace SinavSistemi
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(502, 357);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 13);
-            this.labelControl1.TabIndex = 17;
-            this.labelControl1.Text = "labelControl1";
+            //this.labelControl1.Location = new System.Drawing.Point(502, 357);
+            //this.labelControl1.Name = "labelControl1";
+            //this.labelControl1.Size = new System.Drawing.Size(63, 13);
+            //this.labelControl1.TabIndex = 17;
+            //this.labelControl1.Text = "labelControl1";
             // 
             // progressBar1
             // 
@@ -284,7 +283,7 @@ namespace SinavSistemi
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.labelControl1);
+            //this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.CevapFalse);
             this.Controls.Add(this.LblD);
             this.Controls.Add(this.LblC);
@@ -337,7 +336,6 @@ namespace SinavSistemi
         private System.Windows.Forms.Label LblD;
         private System.Windows.Forms.PictureBox CevapFalse;
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
