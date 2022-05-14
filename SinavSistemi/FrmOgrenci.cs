@@ -252,7 +252,7 @@ namespace SinavSistemi
                 {
                     soruSayac++;
                     Array.Resize(ref SoruIDDizi, soruSayac);
-                    SoruIDDizi[soruSayac-1] = Convert.ToInt32(dr[0]);
+                    SoruIDDizi[soruSayac-1] = Convert.ToInt32(dr[0]); 
                 }
 
 
