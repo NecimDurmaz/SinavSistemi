@@ -18,6 +18,8 @@ namespace SinavSistemi
         }
 
         SqlBaglanti bgl = new SqlBaglanti();
+        int KullaniciID;
+        string KullaniciAD;
         private void BtnGirisYap_Click(object sender, EventArgs e)
         {
             bgl.baglanti();
@@ -28,6 +30,9 @@ namespace SinavSistemi
             SqlDataReader dr = kmt.ExecuteReader();
             if (dr.Read())
             {
+                KullaniciID=Convert.ToInt32(dr[0]);
+                KullaniciAD=dr[3].ToString();
+
                 if (CmbKullaniciTipi.SelectedIndex==0)
                 {
                     FrmAdmin frmAdmin = new FrmAdmin();
@@ -37,6 +42,8 @@ namespace SinavSistemi
                 else if (CmbKullaniciTipi.SelectedIndex==1)
                 {
                     FrmOgrenci frmOgrenci = new FrmOgrenci();
+                    frmOgrenci.KullaniciID=KullaniciID;
+                    frmOgrenci.KullaniciAD=KullaniciAD;
                     frmOgrenci.Show();
                     this.Hide();
                 }
@@ -47,11 +54,11 @@ namespace SinavSistemi
                     this.Hide();
                 }
 
-                MessageBox.Show("Okey");
+               
             }
             else
             {
-                MessageBox.Show("NOOOOO");
+                MessageBox.Show("Yanlış Giriş yapildi.Lütfen tekrar giriniz..!!!");
 
             }
         }
@@ -66,19 +73,19 @@ namespace SinavSistemi
             CmbKullaniciTipi.DataSource = dt;
             CmbKullaniciTipi.DisplayMember = "KullaniciTipAdi";
             CmbKullaniciTipi.ValueMember = "KullaniciTipID";
-            MessageBox.Show(CmbKullaniciTipi.ValueMember.ToString());
+          
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            KullaniciTipleri();
+          KullaniciTipleri();
         }
 
         private void BtnKayıtOl_Click(object sender, EventArgs e)
         {
             FrmKullaniciKayitPaneli fr = new FrmKullaniciKayitPaneli();
             fr.Show();
-            this.Hide();
+             
         }
 
         private void LinkSifremiUnutum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

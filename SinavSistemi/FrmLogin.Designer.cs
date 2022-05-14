@@ -62,8 +62,10 @@ namespace SinavSistemi
             // 
             this.TxtSifre.Location = new System.Drawing.Point(128, 123);
             this.TxtSifre.Name = "TxtSifre";
+            this.TxtSifre.PasswordChar = '*';
             this.TxtSifre.Size = new System.Drawing.Size(263, 26);
             this.TxtSifre.TabIndex = 2;
+            this.TxtSifre.Text = "123";
             // 
             // CmbKullaniciTipi
             // 
@@ -98,6 +100,7 @@ namespace SinavSistemi
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(263, 26);
             this.TxtMail.TabIndex = 6;
+            this.TxtMail.Text = "durmaznecim@gmail.com";
             // 
             // LinkSifremiUnutum
             // 

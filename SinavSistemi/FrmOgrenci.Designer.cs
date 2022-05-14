@@ -53,6 +53,10 @@ namespace SinavSistemi
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblKullanici = new System.Windows.Forms.Label();
+            this.lblDogru = new System.Windows.Forms.Label();
+            this.lblYanlis = new System.Windows.Forms.Label();
+            this.lblBos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CevapTrue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CevapFalse)).BeginInit();
@@ -115,7 +119,6 @@ namespace SinavSistemi
             this.BtnSonraki.Text = "Sonraki";
             this.BtnSonraki.UseVisualStyleBackColor = true;
             this.BtnSonraki.Click += new System.EventHandler(this.BtnSonraki_Click);
-            this.BtnSonraki.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BtnSonraki_MouseClick);
             // 
             // BtnOnceki
             // 
@@ -179,8 +182,9 @@ namespace SinavSistemi
             this.LblA.AutoSize = true;
             this.LblA.Location = new System.Drawing.Point(223, 221);
             this.LblA.Name = "LblA";
-            this.LblA.Size = new System.Drawing.Size(0, 20);
+            this.LblA.Size = new System.Drawing.Size(35, 20);
             this.LblA.TabIndex = 13;
+            this.LblA.Text = "lblA";
             // 
             // pictureBox1
             // 
@@ -196,24 +200,27 @@ namespace SinavSistemi
             this.LblB.AutoSize = true;
             this.LblB.Location = new System.Drawing.Point(223, 274);
             this.LblB.Name = "LblB";
-            this.LblB.Size = new System.Drawing.Size(0, 20);
+            this.LblB.Size = new System.Drawing.Size(35, 20);
             this.LblB.TabIndex = 15;
+            this.LblB.Text = "lblB";
             // 
             // LblC
             // 
             this.LblC.AutoSize = true;
             this.LblC.Location = new System.Drawing.Point(223, 322);
             this.LblC.Name = "LblC";
-            this.LblC.Size = new System.Drawing.Size(0, 20);
+            this.LblC.Size = new System.Drawing.Size(35, 20);
             this.LblC.TabIndex = 15;
+            this.LblC.Text = "lblC";
             // 
             // LblD
             // 
             this.LblD.AutoSize = true;
             this.LblD.Location = new System.Drawing.Point(223, 368);
             this.LblD.Name = "LblD";
-            this.LblD.Size = new System.Drawing.Size(0, 20);
+            this.LblD.Size = new System.Drawing.Size(36, 20);
             this.LblD.TabIndex = 15;
+            this.LblD.Text = "lblD";
             // 
             // CevapFalse
             // 
@@ -230,14 +237,6 @@ namespace SinavSistemi
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // labelControl1
-            // 
-            //this.labelControl1.Location = new System.Drawing.Point(502, 357);
-            //this.labelControl1.Name = "labelControl1";
-            //this.labelControl1.Size = new System.Drawing.Size(63, 13);
-            //this.labelControl1.TabIndex = 17;
-            //this.labelControl1.Text = "labelControl1";
-            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(22, 481);
@@ -249,11 +248,11 @@ namespace SinavSistemi
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(650, 252);
+            this.label5.Location = new System.Drawing.Point(631, 261);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
+            this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 19;
-            this.label5.Text = "label5";
+            this.label5.Text = "Soru ID";
             // 
             // label6
             // 
@@ -274,16 +273,58 @@ namespace SinavSistemi
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Location = new System.Drawing.Point(701, 24);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(93, 20);
+            this.lblKullanici.TabIndex = 22;
+            this.lblKullanici.Text = "Kullanıcı Adı";
+            // 
+            // lblDogru
+            // 
+            this.lblDogru.AutoSize = true;
+            this.lblDogru.Location = new System.Drawing.Point(37, 555);
+            this.lblDogru.Name = "lblDogru";
+            this.lblDogru.Size = new System.Drawing.Size(50, 20);
+            this.lblDogru.TabIndex = 23;
+            this.lblDogru.Text = "dogru";
+            this.lblDogru.Visible = false;
+            // 
+            // lblYanlis
+            // 
+            this.lblYanlis.AutoSize = true;
+            this.lblYanlis.Location = new System.Drawing.Point(207, 555);
+            this.lblYanlis.Name = "lblYanlis";
+            this.lblYanlis.Size = new System.Drawing.Size(48, 20);
+            this.lblYanlis.TabIndex = 24;
+            this.lblYanlis.Text = "yanlis";
+            this.lblYanlis.Visible = false;
+            // 
+            // lblBos
+            // 
+            this.lblBos.AutoSize = true;
+            this.lblBos.Location = new System.Drawing.Point(394, 555);
+            this.lblBos.Name = "lblBos";
+            this.lblBos.Size = new System.Drawing.Size(35, 20);
+            this.lblBos.TabIndex = 25;
+            this.lblBos.Text = "bos";
+            this.lblBos.Visible = false;
+            // 
             // FrmOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 558);
+            this.ClientSize = new System.Drawing.Size(947, 614);
+            this.Controls.Add(this.lblBos);
+            this.Controls.Add(this.lblYanlis);
+            this.Controls.Add(this.lblDogru);
+            this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.progressBar1);
-            //this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.CevapFalse);
             this.Controls.Add(this.LblD);
             this.Controls.Add(this.LblC);
@@ -340,5 +381,9 @@ namespace SinavSistemi
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblKullanici;
+        private System.Windows.Forms.Label lblDogru;
+        private System.Windows.Forms.Label lblYanlis;
+        private System.Windows.Forms.Label lblBos;
     }
 }

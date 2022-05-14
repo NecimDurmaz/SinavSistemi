@@ -11,7 +11,7 @@ namespace SinavSistemi
     {
       public SqlConnection baglanti()
         {
-            SqlConnection bgl = new SqlConnection("Data Source=DESKTOP-S9DTQ5O;Initial Catalog=SinavSistemi;Integrated Security=True");
+            SqlConnection bgl = new SqlConnection("Data Source=DESKTOP-O30S5K7;Initial Catalog=SinavSistemi;Integrated Security=True");
             bgl.Open();
             return bgl;
         }
