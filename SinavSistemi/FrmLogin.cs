@@ -41,7 +41,7 @@ namespace SinavSistemi
                 }
                 else if (CmbKullaniciTipi.SelectedIndex==1)
                 {
-                    FrmOgrenci frmOgrenci = new FrmOgrenci();
+                    FrmOgrenci frmOgrenci = new FrmOgrenci ();
                     frmOgrenci.KullaniciID=KullaniciID;
                     frmOgrenci.KullaniciAD=KullaniciAD;
                     frmOgrenci.Show();

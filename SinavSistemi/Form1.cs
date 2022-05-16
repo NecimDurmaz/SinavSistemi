@@ -16,5 +16,10 @@ namespace SinavSistemi
         {
             InitializeComponent();
         }
+
+        private void FrmKullaniciKayit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
