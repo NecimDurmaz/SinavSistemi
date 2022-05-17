@@ -80,7 +80,13 @@ namespace SinavSistemi
             YanlisCozulenSorularıCekme();
 
             //sınav süresini başlatma
-            SinavSuresi();
+            if (Sinavturu=="NormalSinav")
+            {
+                pnlSure.Visible=true;
+            timer1.Start();
+            SinavSuresiOlusturma();
+
+            }
 
             SinavDurum=true;
         }
@@ -251,20 +257,30 @@ namespace SinavSistemi
 
 
         }
-        public int SinavSuresi()
+            int SinavSuresi = 0;
+            int dakika = 0;
+            int saniye = 0;
+        public void SinavSuresiOlusturma()
         {
-            int sinavsuresi = 0;
-            bgl.baglanti();
-            SqlCommand kmt = new SqlCommand("select SinavSuresi from Dersler where DersID=@p1", bgl.baglanti());
-            kmt.Parameters.AddWithValue("@p1", 1);
-            SqlDataReader dr = kmt.ExecuteReader();
-            if (dr.Read())
+            for (int i = 1; i <= soruSayac; i++)
             {
-                sinavsuresi = Convert.ToInt32(dr[0]);
+                bgl.baglanti();
+                SqlCommand kmt2 = new SqlCommand("select ZorlukSeviyesi from SoruuHavuzu where SoruID=@p1", bgl.baglanti());
+                kmt2.Parameters.AddWithValue("@p1", SoruIDDizi[i-1]);
+                SqlDataReader dr2 = kmt2.ExecuteReader();
+                if (dr2.Read())
+                {
+                    SinavSuresi += 30*(Convert.ToInt32(dr2[0]));
+                }
+                dr2.Close();
+                bgl.baglanti().Close();
             }
-            dr.Close();
-            bgl.baglanti().Close();
-            return sinavsuresi;
+            dakika = SinavSuresi/60;
+            dakika++;
+            saniye=SinavSuresi%60;
+            lblToplamSure.Text=dakika.ToString()+" Dakika "+saniye.ToString()+" Saniye ";
+            progressBar1.Maximum=SinavSuresi;
+        
         }
         public string Sinavturu = " ";
         public void SoruIdOlusturma()
@@ -427,9 +443,7 @@ namespace SinavSistemi
             lblBos.Text ="Bos "+BosBirakilanSoruSayisi.ToString();
             lblDogru.Text ="Dogru "+IsaretlenenDogruSoruSayisi.ToString();
             lblYanlis.Text ="Yanlis "+IsaretlenenYanlisSoruSayisi.ToString();
-            lblBos.Visible=true;
-            lblDogru.Visible=true;
-            lblYanlis.Visible=true;
+            pnlSayac.Visible = true;
             SinavDurum=false;
             button1.Enabled = false;
         }
@@ -440,7 +454,7 @@ namespace SinavSistemi
 
             //Form açıldığında ilk soruyu getirme
             BtnSonraki.PerformClick();
-            timer1.Start();
+            
 
             BtnOnceki.Enabled = false;
             //      SoruCekme(SoruIDDizi[0],1);
@@ -585,7 +599,7 @@ namespace SinavSistemi
                         //soru var ise siliniyor
                         if (EslenenSoruID!=OncedenYanlisCozulenSorularSayac+1)
                         {
-                            label7.Text+=EslenenSoruID.ToString()+" ";
+                            
                             bgl.baglanti();
                             SqlCommand kmtDelete = new SqlCommand("delete From YanlisSoruHavuzu where KullaniciID=@p1 and SoruID=@p2", bgl.baglanti());
                             kmtDelete.Parameters.AddWithValue("@p1", kullaniciID);
@@ -768,24 +782,44 @@ namespace SinavSistemi
             //todo
             YanlisSoruDurumGuncelleme();
             SoruIstatistik();
+            timer1.Stop();
+                dakika=0;
+                saniye=0;
+            lblKalanSure.Text="Sinav Bitmistir.!!!!!";
             MessageBox.Show("Sinav bitmistir.Dogru ve Yanlıs sorularinizi gorebilirsiniz.");
 
             SinavSonuc();
+            btnAna.Visible=true;
 
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            sayac++;
-            timer1.Interval = SinavSuresi() * 60;
-            if (sayac >= SinavSuresi()*60)
+            progressBar1.Value++;
+            timer1.Interval=1000;//1sn
+            if(saniye==0)
+            {
+                saniye=60;
+                dakika--;
+            }
+            saniye=saniye-1;
+            lblKalanSure.Text=dakika.ToString()+" Dakika " +saniye.ToString()+" Saniye";
+            if (dakika==-1)
             {
                 timer1.Stop();
+                lblKalanSure.Text="Sinav suresi bitmistir.!!!";
+                //sinavi bitirme butonu
                 button1.PerformClick();
-                SinavDurum=false;
             }
-            progressBar1.Maximum = SinavSuresi() * 60;
-            progressBar1.Value = sayac;
-            label3.Text = ((SinavSuresi() * 60)- sayac).ToString();
+        }
+
+        private void btnAna_Click(object sender, EventArgs e)
+        {
+            FrmOgrenci frmOgrenci = new FrmOgrenci();
+            frmOgrenci.KullaniciAD=kullaniciAD;
+            frmOgrenci.KullaniciID=kullaniciID;
+            frmOgrenci.Show();
+            this.Hide();
         }
     }
 }

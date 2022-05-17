@@ -30,7 +30,6 @@
         {
             this.btnSinavBaslat = new System.Windows.Forms.Button();
             this.btnSigmaAyar = new System.Windows.Forms.Button();
-            this.btnBilgileriDuzenle = new System.Windows.Forms.Button();
             this.btnEksik = new System.Windows.Forms.Button();
             this.btnIstatistik = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -55,15 +54,6 @@
             this.btnSigmaAyar.UseVisualStyleBackColor = true;
             this.btnSigmaAyar.Click += new System.EventHandler(this.btnSigmaAyar_Click);
             // 
-            // btnBilgileriDuzenle
-            // 
-            this.btnBilgileriDuzenle.Location = new System.Drawing.Point(12, 345);
-            this.btnBilgileriDuzenle.Name = "btnBilgileriDuzenle";
-            this.btnBilgileriDuzenle.Size = new System.Drawing.Size(151, 74);
-            this.btnBilgileriDuzenle.TabIndex = 2;
-            this.btnBilgileriDuzenle.Text = "Bilgilerimi Düzenle";
-            this.btnBilgileriDuzenle.UseVisualStyleBackColor = true;
-            // 
             // btnEksik
             // 
             this.btnEksik.Location = new System.Drawing.Point(12, 246);
@@ -76,7 +66,7 @@
             // 
             // btnIstatistik
             // 
-            this.btnIstatistik.Location = new System.Drawing.Point(12, 447);
+            this.btnIstatistik.Location = new System.Drawing.Point(12, 355);
             this.btnIstatistik.Name = "btnIstatistik";
             this.btnIstatistik.Size = new System.Drawing.Size(151, 74);
             this.btnIstatistik.TabIndex = 4;
@@ -91,11 +81,11 @@
             this.ClientSize = new System.Drawing.Size(540, 545);
             this.Controls.Add(this.btnIstatistik);
             this.Controls.Add(this.btnEksik);
-            this.Controls.Add(this.btnBilgileriDuzenle);
             this.Controls.Add(this.btnSigmaAyar);
             this.Controls.Add(this.btnSinavBaslat);
             this.Name = "FrmOgrenci";
             this.Text = "FrmOgrenci";
+            this.Load += new System.EventHandler(this.FrmOgrenci_Load);
             this.ResumeLayout(false);
 
         }
@@ -104,7 +94,6 @@
 
         private System.Windows.Forms.Button btnSinavBaslat;
         private System.Windows.Forms.Button btnSigmaAyar;
-        private System.Windows.Forms.Button btnBilgileriDuzenle;
         private System.Windows.Forms.Button btnEksik;
         private System.Windows.Forms.Button btnIstatistik;
     }

@@ -61,6 +61,12 @@
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKayitDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKayitDuzenle.Designer.cs">
+      <DependentUpon>frmKayitDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKullaniciKayitPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +115,11 @@
     <Compile Include="FrmSinavSorumlusAnaMenu.Designer.cs">
       <DependentUpon>FrmSinavSorumlusAnaMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSinavSorumlusu.cs">
+    <Compile Include="FrmSinavSoruEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSinavSorumlusu.Designer.cs">
-      <DependentUpon>FrmSinavSorumlusu.cs</DependentUpon>
+    <Compile Include="FrmSinavSoruEkle.Designer.cs">
+      <DependentUpon>FrmSinavSoruEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSoruOnay.cs">
       <SubType>Form</SubType>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKayitDuzenle.resx">
+      <DependentUpon>frmKayitDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKullaniciKayitPaneli.resx">
       <DependentUpon>FrmKullaniciKayitPaneli.cs</DependentUpon>
@@ -154,8 +163,8 @@
     <EmbeddedResource Include="FrmSinavSorumlusAnaMenu.resx">
       <DependentUpon>FrmSinavSorumlusAnaMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSinavSorumlusu.resx">
-      <DependentUpon>FrmSinavSorumlusu.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSinavSoruEkle.resx">
+      <DependentUpon>FrmSinavSoruEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSoruOnay.resx">
       <DependentUpon>frmSoruOnay.cs</DependentUpon>

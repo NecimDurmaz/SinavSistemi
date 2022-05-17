@@ -38,9 +38,9 @@ namespace SinavSistemi
             this.BtnSonraki = new System.Windows.Forms.Button();
             this.BtnOnceki = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblToplamSure = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblKalanSure = new System.Windows.Forms.Label();
             this.CevapTrue = new System.Windows.Forms.PictureBox();
             this.LblA = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,10 +57,17 @@ namespace SinavSistemi
             this.lblDogru = new System.Windows.Forms.Label();
             this.lblYanlis = new System.Windows.Forms.Label();
             this.lblBos = new System.Windows.Forms.Label();
+            this.pnlSure = new System.Windows.Forms.Panel();
+            this.btnAna = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pnlSayac = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.CevapTrue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CevapFalse)).BeginInit();
+            this.pnlSure.SuspendLayout();
+            this.pnlSayac.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -134,38 +141,38 @@ namespace SinavSistemi
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(741, 78);
+            this.label1.Location = new System.Drawing.Point(93, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Süre :";
             // 
-            // label2
+            // lblToplamSure
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(825, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "0";
+            this.lblToplamSure.AutoSize = true;
+            this.lblToplamSure.Location = new System.Drawing.Point(66, 23);
+            this.lblToplamSure.Name = "lblToplamSure";
+            this.lblToplamSure.Size = new System.Drawing.Size(110, 20);
+            this.lblToplamSure.TabIndex = 9;
+            this.lblToplamSure.Text = "lblToplamSure";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(825, 111);
+            this.label3.Location = new System.Drawing.Point(78, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 20);
+            this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 11;
-            this.label3.Text = "0";
+            this.label3.Text = "Kalan Sure";
             // 
-            // label4
+            // lblKalanSure
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(697, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Kalan Süre :";
+            this.lblKalanSure.AutoSize = true;
+            this.lblKalanSure.Location = new System.Drawing.Point(66, 93);
+            this.lblKalanSure.Name = "lblKalanSure";
+            this.lblKalanSure.Size = new System.Drawing.Size(98, 20);
+            this.lblKalanSure.TabIndex = 10;
+            this.lblKalanSure.Text = "lblKalanSure";
             // 
             // CevapTrue
             // 
@@ -244,6 +251,7 @@ namespace SinavSistemi
             this.progressBar1.Maximum = 45;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(673, 40);
+            this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 18;
             // 
             // label5
@@ -260,9 +268,9 @@ namespace SinavSistemi
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(644, 309);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.Size = new System.Drawing.Size(123, 20);
             this.label6.TabIndex = 20;
-            this.label6.Text = "label6";
+            this.label6.Text = "Soru ID + cevap";
             // 
             // button1
             // 
@@ -286,51 +294,113 @@ namespace SinavSistemi
             // lblDogru
             // 
             this.lblDogru.AutoSize = true;
-            this.lblDogru.Location = new System.Drawing.Point(37, 555);
+            this.lblDogru.BackColor = System.Drawing.SystemColors.Control;
+            this.lblDogru.ForeColor = System.Drawing.Color.Lime;
+            this.lblDogru.Location = new System.Drawing.Point(3, 48);
             this.lblDogru.Name = "lblDogru";
             this.lblDogru.Size = new System.Drawing.Size(50, 20);
             this.lblDogru.TabIndex = 23;
             this.lblDogru.Text = "dogru";
-            this.lblDogru.Visible = false;
             // 
             // lblYanlis
             // 
             this.lblYanlis.AutoSize = true;
-            this.lblYanlis.Location = new System.Drawing.Point(207, 555);
+            this.lblYanlis.ForeColor = System.Drawing.Color.Red;
+            this.lblYanlis.Location = new System.Drawing.Point(173, 48);
             this.lblYanlis.Name = "lblYanlis";
             this.lblYanlis.Size = new System.Drawing.Size(48, 20);
             this.lblYanlis.TabIndex = 24;
             this.lblYanlis.Text = "yanlis";
-            this.lblYanlis.Visible = false;
             // 
             // lblBos
             // 
             this.lblBos.AutoSize = true;
-            this.lblBos.Location = new System.Drawing.Point(394, 555);
+            this.lblBos.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblBos.Location = new System.Drawing.Point(313, 48);
             this.lblBos.Name = "lblBos";
             this.lblBos.Size = new System.Drawing.Size(35, 20);
             this.lblBos.TabIndex = 25;
             this.lblBos.Text = "bos";
-            this.lblBos.Visible = false;
+            // 
+            // pnlSure
+            // 
+            this.pnlSure.Controls.Add(this.label1);
+            this.pnlSure.Controls.Add(this.lblToplamSure);
+            this.pnlSure.Controls.Add(this.lblKalanSure);
+            this.pnlSure.Controls.Add(this.label3);
+            this.pnlSure.Location = new System.Drawing.Point(650, 66);
+            this.pnlSure.Name = "pnlSure";
+            this.pnlSure.Size = new System.Drawing.Size(285, 127);
+            this.pnlSure.TabIndex = 27;
+            this.pnlSure.Visible = false;
+            // 
+            // btnAna
+            // 
+            this.btnAna.Location = new System.Drawing.Point(509, 542);
+            this.btnAna.Name = "btnAna";
+            this.btnAna.Size = new System.Drawing.Size(168, 46);
+            this.btnAna.TabIndex = 28;
+            this.btnAna.Text = "Ana Menuye Don";
+            this.btnAna.UseVisualStyleBackColor = true;
+            this.btnAna.Visible = false;
+            this.btnAna.Click += new System.EventHandler(this.btnAna_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(313, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "bos";
+            this.label2.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(173, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 20);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "yanlis";
+            this.label4.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(535, 342);
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.ForeColor = System.Drawing.Color.Lime;
+            this.label7.Location = new System.Drawing.Point(3, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 20);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "dogru";
+            this.label7.Visible = false;
+            // 
+            // pnlSayac
+            // 
+            this.pnlSayac.Controls.Add(this.label7);
+            this.pnlSayac.Controls.Add(this.label2);
+            this.pnlSayac.Controls.Add(this.lblDogru);
+            this.pnlSayac.Controls.Add(this.label4);
+            this.pnlSayac.Controls.Add(this.lblYanlis);
+            this.pnlSayac.Controls.Add(this.lblBos);
+            this.pnlSayac.Location = new System.Drawing.Point(22, 527);
+            this.pnlSayac.Name = "pnlSayac";
+            this.pnlSayac.Size = new System.Drawing.Size(377, 85);
+            this.pnlSayac.TabIndex = 32;
+            this.pnlSayac.Visible = false;
             // 
             // FrmOgrenciSinav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 614);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblBos);
-            this.Controls.Add(this.lblYanlis);
-            this.Controls.Add(this.lblDogru);
+            this.Controls.Add(this.pnlSayac);
+            this.Controls.Add(this.btnAna);
+            this.Controls.Add(this.pnlSure);
             this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -343,10 +413,6 @@ namespace SinavSistemi
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblA);
             this.Controls.Add(this.CevapTrue);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnOnceki);
             this.Controls.Add(this.BtnSonraki);
             this.Controls.Add(this.BtnD);
@@ -362,6 +428,10 @@ namespace SinavSistemi
             ((System.ComponentModel.ISupportInitialize)(this.CevapTrue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CevapFalse)).EndInit();
+            this.pnlSure.ResumeLayout(false);
+            this.pnlSure.PerformLayout();
+            this.pnlSayac.ResumeLayout(false);
+            this.pnlSayac.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,9 +447,9 @@ namespace SinavSistemi
         private System.Windows.Forms.Button BtnSonraki;
         private System.Windows.Forms.Button BtnOnceki;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblToplamSure;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblKalanSure;
         private System.Windows.Forms.PictureBox CevapTrue;
         private System.Windows.Forms.Label LblA;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -396,6 +466,11 @@ namespace SinavSistemi
         private System.Windows.Forms.Label lblDogru;
         private System.Windows.Forms.Label lblYanlis;
         private System.Windows.Forms.Label lblBos;
+        private System.Windows.Forms.Panel pnlSure;
+        private System.Windows.Forms.Button btnAna;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel pnlSayac;
     }
 }

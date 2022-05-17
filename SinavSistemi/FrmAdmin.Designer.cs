@@ -30,12 +30,10 @@ namespace SinavSistemi
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnTumSorular = new System.Windows.Forms.Button();
+            this.btnOnaySoru = new System.Windows.Forms.Button();
+            this.btnKayit = new System.Windows.Forms.Button();
+            this.btnCikis = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,66 +47,50 @@ namespace SinavSistemi
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(250, -2);
+            this.dataGridView1.Location = new System.Drawing.Point(242, -2);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1152, 539);
+            this.dataGridView1.Size = new System.Drawing.Size(1160, 539);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
-            // button1
+            // btnTumSorular
             // 
-            this.button1.Location = new System.Drawing.Point(-6, 224);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Tüm Sorular";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTumSorular.Location = new System.Drawing.Point(-6, 224);
+            this.btnTumSorular.Name = "btnTumSorular";
+            this.btnTumSorular.Size = new System.Drawing.Size(250, 50);
+            this.btnTumSorular.TabIndex = 1;
+            this.btnTumSorular.Text = "Tüm Sorular";
+            this.btnTumSorular.UseVisualStyleBackColor = true;
+            this.btnTumSorular.Click += new System.EventHandler(this.btnTumSorular_Click);
             // 
-            // button2
+            // btnOnaySoru
             // 
-            this.button2.Location = new System.Drawing.Point(-6, 267);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Onaylanmayı Bekleyen Sorular";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOnaySoru.Location = new System.Drawing.Point(-6, 267);
+            this.btnOnaySoru.Name = "btnOnaySoru";
+            this.btnOnaySoru.Size = new System.Drawing.Size(250, 50);
+            this.btnOnaySoru.TabIndex = 2;
+            this.btnOnaySoru.Text = "Onaylanmayı Bekleyen Sorular";
+            this.btnOnaySoru.UseVisualStyleBackColor = true;
+            this.btnOnaySoru.Click += new System.EventHandler(this.btnOnaySoru_Click);
             // 
-            // button3
+            // btnKayit
             // 
-            this.button3.Location = new System.Drawing.Point(-6, 314);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(250, 50);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Kayıtları Görüntüle";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnKayit.Location = new System.Drawing.Point(-6, 314);
+            this.btnKayit.Name = "btnKayit";
+            this.btnKayit.Size = new System.Drawing.Size(250, 50);
+            this.btnKayit.TabIndex = 3;
+            this.btnKayit.Text = "Kayıtları Görüntüle ve Düzenle";
+            this.btnKayit.UseVisualStyleBackColor = true;
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
-            // button4
+            // btnCikis
             // 
-            this.button4.Location = new System.Drawing.Point(-6, 452);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(250, 50);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Çıkış";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(-6, 405);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(250, 50);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Bilgi Düzenle";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(-6, 358);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(250, 50);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Kayıt Ekle";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCikis.Location = new System.Drawing.Point(-6, 361);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(250, 50);
+            this.btnCikis.TabIndex = 6;
+            this.btnCikis.Text = "Çıkış";
+            this.btnCikis.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -167,12 +149,10 @@ namespace SinavSistemi
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCikis);
+            this.Controls.Add(this.btnKayit);
+            this.Controls.Add(this.btnOnaySoru);
+            this.Controls.Add(this.btnTumSorular);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmAdmin";
             this.Text = "FrmAdmin";
@@ -186,12 +166,10 @@ namespace SinavSistemi
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnTumSorular;
+        private System.Windows.Forms.Button btnOnaySoru;
+        private System.Windows.Forms.Button btnKayit;
+        private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

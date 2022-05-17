@@ -68,5 +68,10 @@ namespace SinavSistemi
             frmOgrenci.Show();
             this.Hide();
         }
+
+        private void FrmOgrenci_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

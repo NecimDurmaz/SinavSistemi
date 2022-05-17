@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Drawing.Printing;
 namespace SinavSistemi
 {
     public partial class FrmOgrenciIstatistik : Form
@@ -124,7 +125,7 @@ namespace SinavSistemi
             Array.Resize(ref YanlisSoruDersID, DogruSoruIDAdet);
             Array.Resize(ref YanlisSoruKonuID, DogruSoruIDAdet);
         }
-       
+
         public void CmbDoldur()
         {
             bgl.baglanti();
@@ -137,11 +138,12 @@ namespace SinavSistemi
             cmbDers.ValueMember = "DersID";
 
 
-   
+
         }
-        int Dogru =0;
+        int Dogru = 0;
         int Yanlis = 0;
-        int Bos= 0;
+        int Bos = 0;
+        int toplam = 0;
         public void GrafikDoldur()
         {
             //Point leri temizleme.
@@ -153,46 +155,67 @@ namespace SinavSistemi
             {
                 series.Points.Clear();
             }
-             Dogru = 0;
-             Yanlis = 0;
-             Bos = 0;
+            Dogru = 0;
+            Yanlis = 0;
+            Bos = 0;
             bgl.baglanti();
             SqlCommand kmt = new SqlCommand("Select I.SoruID,I.BosSayac,I.DogruSayac,I.YanlisSayac,K.KonuIsim from (IstatistikSoru I Inner join SoruuHavuzu S on I.SoruID=S.SoruID)" +
                 " Inner Join Konular k on k.KonuID=s.KonuID where K.KonuIsim=@p1  order by I.SoruID asc ", bgl.baglanti());
             kmt.Parameters.AddWithValue("@p1", cmbKonu.Text);
-            SqlDataReader dr= kmt.ExecuteReader();
+            SqlDataReader dr = kmt.ExecuteReader();
             int i = 0;
-            
+
 
             while (dr.Read())
             {
-                chartKonu.Series["Bos"].Points.Add((int)dr[1]);
-                chartKonu.Series["Dogru"].Points.Add((int)dr[2]);
-                chartKonu.Series["Yanlis"].Points.Add((int)dr[3]);
-                chartKonu.Series["Bos"].Points[i].AxisLabel = dr[0].ToString();
+                i++;
+
+
+                chartKonu.Series["Bos"].Points.AddXY(dr[0], (int)dr[1]);
+                chartKonu.Series["Dogru"].Points.AddXY(dr[0], (int)dr[2]);
+                chartKonu.Series["Yanlis"].Points.AddXY(dr[0], (int)dr[3]);
+
+
                 Bos+=(int)dr[1];
                 Dogru+=(int)dr[2];
                 Yanlis+=(int)dr[3];
-                i++;
 
             }
-            chartYuzde.Series["Yuzde"].Points.AddXY("Bos",Bos);
-            chartYuzde.Series["Yuzde"].Points.AddXY("Dogru",Dogru);
-            chartYuzde.Series["Yuzde"].Points.AddXY("Yanlis",Yanlis);
+            toplam=Bos+Dogru+Yanlis;
+            lblToplam.Text= "%"+(100*Dogru)/toplam+" oranında basarili.!!!";
+            chartYuzde.Series["Yuzde"].Points.AddXY("Bos", Bos);
+            chartYuzde.Series["Yuzde"].Points.AddXY("Dogru", Dogru);
+            chartYuzde.Series["Yuzde"].Points.AddXY("Yanlis", Yanlis);
             chartYuzde.Series["Yuzde"].Points[0].Color =Color.DarkGray;
             chartYuzde.Series["Yuzde"].Points[1].Color =Color.Chartreuse;
             chartYuzde.Series["Yuzde"].Points[2].Color = Color.Red;
 
 
         }
+        string GenelVeri = " ";
 
-
+        public void CiktiVeri()
+        {
+            bgl.baglanti();
+            SqlCommand kmt = new SqlCommand(" Select  K.KonuIsim,sum(I.BosSayac) ,sum(I.DogruSayac),sum(I.YanlisSayac) from (IstatistikSoru I Inner join SoruuHavuzu S on I.SoruID=S.SoruID)" +
+                                             "Inner Join Konular k on k.KonuID=s.KonuID   where KullaniciID=@p1 group by k.KonuIsim ", bgl.baglanti());
+            kmt.Parameters.AddWithValue("@p1", KullaniciID);
+            SqlDataReader dr = kmt.ExecuteReader();
+            int yuzde;
+            int toplam;
+            while (dr.Read())
+            {
+                toplam= ((int)dr[1]+(int)dr[2]+(int)dr[3]);
+                yuzde = (100*(int)dr[2])/toplam;
+                GenelVeri += dr[0].ToString()+" konusunda toplamda "+dr[1].ToString()+" bos "+dr[2].ToString() +" dogru "+dr[3].ToString()+" yanlis sayiniz vardir."+"%"+yuzde+" oranında soruları basarili cozdunuz.!!! \n\n";
+            }
+             
+            dr.Close();
+            bgl.baglanti().Close();
+        }
         private void FrmOgrenciIstatistik_Load(object sender, EventArgs e)
         {
             CmbDoldur();
-            
-          
-
         }
         public void KonuCekme()
         {
@@ -213,24 +236,37 @@ namespace SinavSistemi
 
 
             KonuCekme();
-                //bgl.baglanti();
-                //SqlCommand kmt2 = new SqlCommand("select * from konular where dersID=@p1", bgl.baglanti());
-                //kmt2.Parameters.AddWithValue("@p1", cmbDers.SelectedValue);
-                //DataTable dt2 = new DataTable();
-                //dt2.Load(kmt2.ExecuteReader());
-                //bgl.baglanti().Close();
-                //cmbKonu.DataSource = dt2;
-                //cmbKonu.DisplayMember = "konuIsim";
-                //cmbKonu.ValueMember = "konuID";
-            
+
+
         }
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //btnGrafik
             GrafikDoldur();
+
+        }
+        PrintDialog PRD = new PrintDialog();
+
+        private void btnCikti_Click(object sender, EventArgs e)
+        {
+            CiktiVeri();
+            PrintDocument Kagit = new PrintDocument();
+            DialogResult yazdirmaislemi;
+            yazdirmaislemi= PRD.ShowDialog();
+            Kagit.PrintPage +=Kagit_PrintPage;
+            if (yazdirmaislemi==DialogResult.OK)
+            {
+                Kagit.Print();
+            }
         }
 
-        
+        private void Kagit_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font YaziAilesi = new Font("Arial", 12);
+            SolidBrush kalem = new SolidBrush(Color.Black);
+            e.Graphics.DrawString=(GenelVeri, YaziAilesi, kalem, 10, 20);
+        }
     }
 }
