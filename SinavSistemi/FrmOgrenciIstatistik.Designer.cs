@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartKonu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbDers = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,73 +56,78 @@
             this.chartKonu.BackColor = System.Drawing.Color.Transparent;
             this.chartKonu.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
             this.chartKonu.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea7.Name = "ChartArea1";
-            this.chartKonu.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartKonu.Legends.Add(legend7);
-            this.chartKonu.Location = new System.Drawing.Point(176, 41);
+            chartArea3.Name = "ChartArea1";
+            this.chartKonu.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartKonu.Legends.Add(legend3);
+            this.chartKonu.Location = new System.Drawing.Point(176, 35);
             this.chartKonu.Name = "chartKonu";
             this.chartKonu.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series13.BorderColor = System.Drawing.Color.White;
-            series13.ChartArea = "ChartArea1";
-            series13.Color = System.Drawing.Color.Chartreuse;
-            series13.IsValueShownAsLabel = true;
-            series13.Legend = "Legend1";
-            series13.Name = "Dogru";
-            series14.ChartArea = "ChartArea1";
-            series14.Color = System.Drawing.Color.Red;
-            series14.IsValueShownAsLabel = true;
-            series14.Legend = "Legend1";
-            series14.Name = "Yanlis";
-            series15.ChartArea = "ChartArea1";
-            series15.Color = System.Drawing.Color.DarkGray;
-            series15.IsValueShownAsLabel = true;
-            series15.Legend = "Legend1";
-            series15.Name = "Bos";
-            this.chartKonu.Series.Add(series13);
-            this.chartKonu.Series.Add(series14);
-            this.chartKonu.Series.Add(series15);
-            this.chartKonu.Size = new System.Drawing.Size(1119, 372);
+            series5.BorderColor = System.Drawing.Color.White;
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.Chartreuse;
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.Name = "Dogru";
+            series6.ChartArea = "ChartArea1";
+            series6.Color = System.Drawing.Color.Red;
+            series6.IsValueShownAsLabel = true;
+            series6.Legend = "Legend1";
+            series6.Name = "Yanlis";
+            series7.ChartArea = "ChartArea1";
+            series7.Color = System.Drawing.Color.DarkGray;
+            series7.IsValueShownAsLabel = true;
+            series7.Legend = "Legend1";
+            series7.Name = "Bos";
+            this.chartKonu.Series.Add(series5);
+            this.chartKonu.Series.Add(series6);
+            this.chartKonu.Series.Add(series7);
+            this.chartKonu.Size = new System.Drawing.Size(1060, 372);
             this.chartKonu.TabIndex = 0;
             this.chartKonu.Text = "Chart Konu";
             // 
             // cmbDers
             // 
+            this.cmbDers.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbDers.FormattingEnabled = true;
             this.cmbDers.Location = new System.Drawing.Point(23, 67);
             this.cmbDers.Name = "cmbDers";
-            this.cmbDers.Size = new System.Drawing.Size(121, 21);
+            this.cmbDers.Size = new System.Drawing.Size(121, 27);
             this.cmbDers.TabIndex = 1;
             this.cmbDers.SelectedIndexChanged += new System.EventHandler(this.cmbDers_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(20, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(56, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Dersler";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(20, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Konular";
             // 
             // cmbKonu
             // 
+            this.cmbKonu.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbKonu.FormattingEnabled = true;
             this.cmbKonu.Location = new System.Drawing.Point(23, 150);
             this.cmbKonu.Name = "cmbKonu";
-            this.cmbKonu.Size = new System.Drawing.Size(121, 21);
+            this.cmbKonu.Size = new System.Drawing.Size(121, 27);
             this.cmbKonu.TabIndex = 3;
             // 
             // btnIstatistik
             // 
+            this.btnIstatistik.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIstatistik.Location = new System.Drawing.Point(23, 215);
             this.btnIstatistik.Name = "btnIstatistik";
             this.btnIstatistik.Size = new System.Drawing.Size(121, 31);
@@ -133,51 +138,55 @@
             // 
             // chartYuzde
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chartYuzde.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartYuzde.Legends.Add(legend8);
-            this.chartYuzde.Location = new System.Drawing.Point(319, 457);
+            chartArea4.Name = "ChartArea1";
+            this.chartYuzde.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartYuzde.Legends.Add(legend4);
+            this.chartYuzde.Location = new System.Drawing.Point(176, 446);
             this.chartYuzde.Name = "chartYuzde";
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series16.IsValueShownAsLabel = true;
-            series16.Legend = "Legend1";
-            series16.Name = "Yuzde";
-            this.chartYuzde.Series.Add(series16);
-            this.chartYuzde.Size = new System.Drawing.Size(496, 300);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series8.IsValueShownAsLabel = true;
+            series8.Legend = "Legend1";
+            series8.Name = "Yuzde";
+            this.chartYuzde.Series.Add(series8);
+            this.chartYuzde.Size = new System.Drawing.Size(638, 300);
             this.chartYuzde.TabIndex = 6;
             this.chartYuzde.Text = "chartYuzde";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(451, 9);
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(397, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.Size = new System.Drawing.Size(214, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Soru Bazli Istatistik";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(504, 430);
+            this.label4.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(397, 420);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.Size = new System.Drawing.Size(220, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Konu Bazlı Istatistik";
             // 
             // lblToplam
             // 
             this.lblToplam.AutoSize = true;
-            this.lblToplam.Location = new System.Drawing.Point(918, 532);
+            this.lblToplam.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblToplam.Location = new System.Drawing.Point(820, 522);
             this.lblToplam.Name = "lblToplam";
-            this.lblToplam.Size = new System.Drawing.Size(35, 13);
+            this.lblToplam.Size = new System.Drawing.Size(74, 29);
             this.lblToplam.TabIndex = 9;
             this.lblToplam.Text = "label5";
             // 
             // btnCikti
             // 
+            this.btnCikti.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCikti.Location = new System.Drawing.Point(23, 284);
             this.btnCikti.Name = "btnCikti";
             this.btnCikti.Size = new System.Drawing.Size(121, 38);
@@ -190,7 +199,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1318, 753);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(1248, 752);
             this.Controls.Add(this.btnCikti);
             this.Controls.Add(this.lblToplam);
             this.Controls.Add(this.label4);
@@ -203,7 +213,7 @@
             this.Controls.Add(this.cmbDers);
             this.Controls.Add(this.chartKonu);
             this.Name = "FrmOgrenciIstatistik";
-            this.Text = "FrmOgrenciIstatistik";
+            this.Text = "Ogrenci Istatistik";
             this.Load += new System.EventHandler(this.FrmOgrenciIstatistik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartKonu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartYuzde)).EndInit();

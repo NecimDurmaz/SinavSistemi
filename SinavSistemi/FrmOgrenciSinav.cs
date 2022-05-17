@@ -28,7 +28,7 @@ namespace SinavSistemi
         string[] DogruSoruCevapDizi = new string[0];  //  Çekilen Soruların Cevabını'sini tuttuğumuz dizi
         int DogruCevapSayac;//DogruSoruCevap dizine eklenen soru sayacı
         int KacinciSoru; // O anki gösterilen Sorunun ID'sini tuttuğumuz değişken
-        int sayac; //Zamanlayıcı İcin Kullandigimiz Sayac
+        
         bool SinavDurum = false;//Sınavın devam edip etmediğini tutuğumuz değişken
         private int kullaniciID;
         int toplamSoruSayac;// VERİTABANINDAKİ TOPLAM SORU SAYISINI GÖSTEREN DEGİSKEN
@@ -64,7 +64,7 @@ namespace SinavSistemi
             OncedenYanlisCozulenSorularSayac =0;
             DogruCevapSayac = 0;
             KacinciSoru = 0;
-            sayac = 0;
+           
             IsaretlenenDogruSoruSayisi = 0;
             IsaretlenenYanlisSoruSayisi = 0;
             BosBirakilanSoruSayisi = 0;
@@ -510,7 +510,7 @@ namespace SinavSistemi
             if (SinavDurum==true)
             {
                 CevapButonIslemleri();
-                label6.Text = KacinciSoru.ToString();
+              
             }
             else
             {
@@ -534,7 +534,7 @@ namespace SinavSistemi
             if (SinavDurum==true)
             {
                 CevapButonIslemleri();
-                label6.Text = KacinciSoru.ToString()+" "+DogruSoruCevapDizi[KacinciSoru-1];
+               
             }
             else
             {

@@ -44,6 +44,7 @@ namespace SinavSistemi
                     FrmOgrenci frmOgrenci = new FrmOgrenci ();
                     frmOgrenci.KullaniciID=KullaniciID;
                     frmOgrenci.KullaniciAD=KullaniciAD;
+                    frmOgrenci.Mail=TxtMail.Text;
                     frmOgrenci.Show();
                     this.Hide();
                 }

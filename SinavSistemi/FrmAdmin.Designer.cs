@@ -47,17 +47,19 @@ namespace SinavSistemi
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(242, -2);
+            this.dataGridView1.Location = new System.Drawing.Point(258, -3);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 539);
+            this.dataGridView1.Size = new System.Drawing.Size(874, 764);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // btnTumSorular
             // 
-            this.btnTumSorular.Location = new System.Drawing.Point(-6, 224);
+            this.btnTumSorular.Location = new System.Drawing.Point(7, 237);
+            this.btnTumSorular.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumSorular.Name = "btnTumSorular";
-            this.btnTumSorular.Size = new System.Drawing.Size(250, 50);
+            this.btnTumSorular.Size = new System.Drawing.Size(251, 53);
             this.btnTumSorular.TabIndex = 1;
             this.btnTumSorular.Text = "Tüm Sorular";
             this.btnTumSorular.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@ namespace SinavSistemi
             // 
             // btnOnaySoru
             // 
-            this.btnOnaySoru.Location = new System.Drawing.Point(-6, 267);
+            this.btnOnaySoru.Location = new System.Drawing.Point(7, 300);
+            this.btnOnaySoru.Margin = new System.Windows.Forms.Padding(4);
             this.btnOnaySoru.Name = "btnOnaySoru";
-            this.btnOnaySoru.Size = new System.Drawing.Size(250, 50);
+            this.btnOnaySoru.Size = new System.Drawing.Size(251, 53);
             this.btnOnaySoru.TabIndex = 2;
             this.btnOnaySoru.Text = "Onaylanmayı Bekleyen Sorular";
             this.btnOnaySoru.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@ namespace SinavSistemi
             // 
             // btnKayit
             // 
-            this.btnKayit.Location = new System.Drawing.Point(-6, 314);
+            this.btnKayit.Location = new System.Drawing.Point(7, 369);
+            this.btnKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnKayit.Name = "btnKayit";
-            this.btnKayit.Size = new System.Drawing.Size(250, 50);
+            this.btnKayit.Size = new System.Drawing.Size(251, 53);
             this.btnKayit.TabIndex = 3;
             this.btnKayit.Text = "Kayıtları Görüntüle ve Düzenle";
             this.btnKayit.UseVisualStyleBackColor = true;
@@ -85,18 +89,22 @@ namespace SinavSistemi
             // 
             // btnCikis
             // 
-            this.btnCikis.Location = new System.Drawing.Point(-6, 361);
+            this.btnCikis.BackColor = System.Drawing.Color.Red;
+            this.btnCikis.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCikis.Location = new System.Drawing.Point(7, 438);
+            this.btnCikis.Margin = new System.Windows.Forms.Padding(4);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(250, 50);
+            this.btnCikis.Size = new System.Drawing.Size(251, 53);
             this.btnCikis.TabIndex = 6;
-            this.btnCikis.Text = "Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.Text = "Çıkıs";
+            this.btnCikis.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 48);
+            this.label1.Location = new System.Drawing.Point(18, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 42);
             this.label1.TabIndex = 7;
@@ -106,44 +114,49 @@ namespace SinavSistemi
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 106);
+            this.label2.Location = new System.Drawing.Point(3, 155);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.Size = new System.Drawing.Size(28, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Ad";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 136);
+            this.label3.Location = new System.Drawing.Point(3, 199);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(52, 19);
             this.label3.TabIndex = 9;
             this.label3.Text = "Soyad";
             // 
             // LblAd
             // 
             this.LblAd.AutoSize = true;
-            this.LblAd.Location = new System.Drawing.Point(84, 106);
+            this.LblAd.Location = new System.Drawing.Point(126, 155);
+            this.LblAd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAd.Name = "LblAd";
-            this.LblAd.Size = new System.Drawing.Size(35, 13);
+            this.LblAd.Size = new System.Drawing.Size(50, 19);
             this.LblAd.TabIndex = 10;
             this.LblAd.Text = "label4";
             // 
             // LblSoyad
             // 
             this.LblSoyad.AutoSize = true;
-            this.LblSoyad.Location = new System.Drawing.Point(84, 136);
+            this.LblSoyad.Location = new System.Drawing.Point(126, 199);
+            this.LblSoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSoyad.Name = "LblSoyad";
-            this.LblSoyad.Size = new System.Drawing.Size(35, 13);
+            this.LblSoyad.Size = new System.Drawing.Size(50, 19);
             this.LblSoyad.TabIndex = 11;
             this.LblSoyad.Text = "label5";
             // 
             // FrmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1405, 538);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(1133, 757);
             this.Controls.Add(this.LblSoyad);
             this.Controls.Add(this.LblAd);
             this.Controls.Add(this.label3);
@@ -154,8 +167,10 @@ namespace SinavSistemi
             this.Controls.Add(this.btnOnaySoru);
             this.Controls.Add(this.btnTumSorular);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAdmin";
-            this.Text = "FrmAdmin";
+            this.Text = "Admin Paneli";
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

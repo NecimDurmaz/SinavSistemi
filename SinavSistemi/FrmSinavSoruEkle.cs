@@ -64,6 +64,7 @@ namespace SinavSistemi
             TxtResim.Text = openFileDialog1.FileName;
         }
 
+        
         private void BtnSoruEkle_Click(object sender, EventArgs e)
         {
             bgl.baglanti();
@@ -81,15 +82,7 @@ namespace SinavSistemi
             kmt.Parameters.AddWithValue("@p11", TxtDogruCevap.Text);
             kmt.ExecuteNonQuery();
             bgl.baglanti().Close();
-            //bgl.Open();
-            ////SqlCommand kmtCevaplar = new SqlCommand("insert into Cevaplar ( Cevap1,Cevap2,Cevap3,Cevap4,DogruCevap ) VALUES (@p1,@p2,@p3,@p4,@p5 )", bgl);
-            ////kmtCevaplar.Parameters.AddWithValue("@p1",TxtCevap1.Text);
-            ////kmtCevaplar.Parameters.AddWithValue("@p2",TxtCevap2.Text);
-            ////kmtCevaplar.Parameters.AddWithValue("@p3",TxtCevap3.Text);
-            ////kmtCevaplar.Parameters.AddWithValue("@p4", TxtCevap4.Text);s
-            ////kmtCevaplar.Parameters.AddWithValue("@p5",TxtDogruCevap.Text);
-            ////kmtCevaplar.ExecuteNonQuery();
-            //bgl.Close();
+           
             MessageBox.Show("Okey");
         }
     }

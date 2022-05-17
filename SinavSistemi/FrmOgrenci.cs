@@ -28,6 +28,13 @@ namespace SinavSistemi
             set { kullaniciID = value; }
         }
 
+        private string mail;
+
+        public string Mail
+        {
+            get { return mail; }
+            set { mail = value; }
+        }
 
         public FrmOgrenci()
         {
@@ -71,7 +78,8 @@ namespace SinavSistemi
 
         private void FrmOgrenci_Load(object sender, EventArgs e)
         {
-
+            lblIsim.Text=KullaniciAD.ToString();
+            lblMail.Text=Mail.ToString();
         }
     }
 }

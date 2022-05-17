@@ -48,35 +48,7 @@ namespace SinavSistemi
             get { return kullaniciAD; }
             set { kullaniciAD = value; }
         }
-
-        //public void DersKonuAdCekme()
-        //{
-        //    for (int i = 1; i <= DogruSoruIDAdet; i++)
-        //    {
-
-        //        bgl.baglanti();
-        //        SqlCommand kmt = new SqlCommand("select KonuIsim from Dersler where KonuID=@p1", bgl.baglanti());
-        //        kmt.Parameters.AddWithValue("@p1", DogruSoruDersID[i-1]);
-        //        SqlDataReader dr = kmt.ExecuteReader();
-        //        while (dr.Read())
-        //        {
-        //            DogruSoruDersAD[i-1]=(string)dr[0];
-        //        }
-        //        dr.Close();
-        //        bgl.baglanti().Close();
-
-        //        bgl.baglanti();
-        //        SqlCommand kmt2 = new SqlCommand("select KonuIsim from Dersler where KonuID=@p1", bgl.baglanti());
-        //        kmt2.Parameters.AddWithValue("@p1", DogruSoruDersID[i-1]);
-        //        SqlDataReader dr2 = kmt2.ExecuteReader();
-        //        while (dr2.Read())
-        //        {
-        //            DogruSoruKonuAD[i-1]=(string)dr2[0];
-        //        }
-        //        dr2.Close();
-        //        bgl.baglanti().Close();
-        //    }
-        //}
+ 
         public void DersKonuIDCekme()
         {
             bgl.baglanti();
@@ -266,7 +238,7 @@ namespace SinavSistemi
         {
             Font YaziAilesi = new Font("Arial", 12);
             SolidBrush kalem = new SolidBrush(Color.Black);
-            e.Graphics.DrawString=(GenelVeri, YaziAilesi, kalem, 10, 20);
+            e.Graphics.DrawString(GenelVeri, YaziAilesi, kalem, 10, 20);
         }
     }
 }
