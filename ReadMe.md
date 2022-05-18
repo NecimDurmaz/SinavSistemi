@@ -28,7 +28,7 @@
 5-) Soru ekleme bölümünden sorunun zorluğunu, resmini, cevaplarını, açıklamasını ve detaylarını ekliyor. Bu eklenen soru admin onaylayana kadar pasif bir durumda veri tabanına ekleniyor.
 6-) Ders ve Konu ekleme bölümünden ders ve konu ekleniyor.
 
-E-) Admin;
+## E-) Admin;
 
 7-) Sınav Sorumlusunun eklediği soruları onaylamayı bekleyen kısmında görüntülüyor. Sorunun üstüne tıklandığında detaylıca soru görülüyor ve isteniliyorsa soruyu onaylayıp soru havuzuna ekliyor veya silebiliyor.
 8-)Soru havuzundaki aktif olan tüm soruları tüm sorular kısmından görüntüleyebiliyor.
