@@ -9,6 +9,8 @@
 
 -[Mehmet Yıldırım](https://github.com/MehmetYildirimDev)
 
+##[Trello](https://trello.com/b/PmCxoeQY/yazılım-yapımı)
+
 ## A-) Programın çalışma işleyişi;
 
  Programın amacı bir soruyu 6 farklı zamanda görüp soruyu her bir defasında doğru yaparak hafızaya kalıcı olarak alıp o sorunun konusunu öğrenmektir. Soruyu yanlış çözdüğünde bu döngü baştan başlayarak 6 defa art arda oluncaya kadar o soru farklı zamanlarda karşısına gelmektedir ve bu işleyişe Sigma 6 denir.
