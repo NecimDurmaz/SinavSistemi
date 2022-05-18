@@ -32,5 +32,11 @@ namespace SinavSistemi
             FrmSinavSoruEkle frmSoru = new FrmSinavSoruEkle();
             frmSoru.Show();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            frmDersKonu frmDers = new frmDersKonu();
+            frmDers.Show();
+        }
     }
 }

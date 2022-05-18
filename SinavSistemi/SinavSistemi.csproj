@@ -55,6 +55,12 @@
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDersKonu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDersKonu.Designer.cs">
+      <DependentUpon>frmDersKonu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKayitDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <Compile Include="SqlBaglanti.cs" />
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDersKonu.resx">
+      <DependentUpon>frmDersKonu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKayitDuzenle.resx">
       <DependentUpon>frmKayitDuzenle.cs</DependentUpon>

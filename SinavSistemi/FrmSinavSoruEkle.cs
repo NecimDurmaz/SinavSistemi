@@ -83,7 +83,7 @@ namespace SinavSistemi
             kmt.ExecuteNonQuery();
             bgl.baglanti().Close();
            
-            MessageBox.Show("Okey");
+            MessageBox.Show("Soru basariyla eklendi...!!!");
         }
     }
 }

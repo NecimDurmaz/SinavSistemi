@@ -50,7 +50,7 @@ namespace SinavSistemi
             kmt.Parameters.AddWithValue("@p7", CmbGuvenlikSorusu.SelectedIndex);
             kmt.Parameters.AddWithValue("@p8", TxtGuvenlikCevap.Text);
             kmt.ExecuteNonQuery();
-            MessageBox.Show("Okey");
+            MessageBox.Show("Basariyla kayit oldunuz...!!!");
             bgl.baglanti().Close();
         }
         public void KullaniciIDAlma()
