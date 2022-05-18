@@ -87,7 +87,7 @@ namespace SinavSistemi
         }
         private void frmKayitDuzenle_Load(object sender, EventArgs e)
         {
-            GuvenlikSorulari();
+            GuvenlikSorulari(); 
             KullaniciTipleri();
             VeriDoldurma();
         }

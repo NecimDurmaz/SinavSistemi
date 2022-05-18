@@ -4,7 +4,7 @@ Hazırlayanlar;
 [Mustafa Yenal](https://github.com/2129mustafa)
 [Yavuz Selim Göç](https://github.com/YavuzSelimGoc)
 [Mehmet Yıldırım](https://github.com/MehmetYildirimDev)
-A-) Programın çalışma işleyişi;
+A-) Programın çalışma işleyişi; 
 
  Programın amacı bir soruyu 6 farklı zamanda görüp soruyu her bir defasında doğru yaparak hafızaya kalıcı olarak alıp o sorunun konusunu öğrenmektir. Soruyu yanlış çözdüğünde bu döngü baştan başlayarak 6 defa art arda oluncaya kadar o soru farklı zamanlarda karşısına gelmektedir ve bu işleyişe Sigma 6 denir.
 
