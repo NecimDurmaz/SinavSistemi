@@ -22,7 +22,7 @@ namespace SinavSistemi
         public void SigmaGetir()
         {
             bgl.baglanti();
-            SqlCommand kmt = new SqlCommand("select * from Sigma where KullaniciID=@p1", bgl.baglanti());
+            SqlCommand kmt = new SqlCommand("select * from SigmaSure where KullaniciID=@p1", bgl.baglanti());
             kmt.Parameters.AddWithValue("@p1", ID);
             SqlDataReader dr = kmt.ExecuteReader();
             if (dr.Read())
@@ -51,7 +51,7 @@ namespace SinavSistemi
                 && Convert.ToInt32(txtSigma4.Text)<Convert.ToInt32(txtSigma5.Text)&&Convert.ToInt32(txtSigma5.Text)<Convert.ToInt32(txtSigma6.Text))
             {
                 bgl.baglanti();
-                SqlCommand kmt = new SqlCommand("update Sigma Set Sigma1=@p1,Sigma2=@p2,Sigma3=@p3,Sigma4=@p4,Sigma5=@p5,Sigma6=@p6 " +
+                SqlCommand kmt = new SqlCommand("update SigmaSure Set Sigma1=@p1,Sigma2=@p2,Sigma3=@p3,Sigma4=@p4,Sigma5=@p5,Sigma6=@p6 " +
                     "where  KullaniciID=@p7", bgl.baglanti());
                 kmt.Parameters.AddWithValue("p1", txtSigma1.Text);
                 kmt.Parameters.AddWithValue("p2", txtSigma2.Text);

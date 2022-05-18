@@ -71,7 +71,7 @@ namespace SinavSistemi
             //  otomatik Sigma 6 doldurma
 
             bgl.baglanti();
-            SqlCommand SigmaKmt = new SqlCommand("insert into Sigma (Sigma1,Sigma2,Sigma3,Sigma4,Sigma5,Sigma6,KullaniciID) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)  ", bgl.baglanti());
+            SqlCommand SigmaKmt = new SqlCommand("insert into SigmaSure (Sigma1,Sigma2,Sigma3,Sigma4,Sigma5,Sigma6,KullaniciID) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)  ", bgl.baglanti());
             SigmaKmt.Parameters.AddWithValue("@p1", 1);
             SigmaKmt.Parameters.AddWithValue("@p2", 2);
             SigmaKmt.Parameters.AddWithValue("@p3", 7);

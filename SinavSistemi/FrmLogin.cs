@@ -93,7 +93,7 @@ namespace SinavSistemi
         {
             FrmSifremiUnuttum fr = new FrmSifremiUnuttum();
             fr.Show();
-            this.Hide();
+           
         }
     }
 }

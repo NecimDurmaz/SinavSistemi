@@ -50,7 +50,6 @@ namespace SinavSistemi
             this.CevapFalse = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblKullanici = new System.Windows.Forms.Label();
             this.lblDogru = new System.Windows.Forms.Label();
@@ -63,7 +62,6 @@ namespace SinavSistemi
             this.label7 = new System.Windows.Forms.Label();
             this.pnlSayac = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CevapTrue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CevapFalse)).BeginInit();
@@ -255,15 +253,6 @@ namespace SinavSistemi
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 18;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(129, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Soru ID";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(309, 473);
@@ -394,29 +383,18 @@ namespace SinavSistemi
             this.label8.TabIndex = 33;
             this.label8.Text = "Kullanıcı Adı";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 20);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "Soru Numarası";
-            // 
             // FrmOgrenciSinav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(965, 614);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pnlSayac);
             this.Controls.Add(this.btnAna);
             this.Controls.Add(this.pnlSure);
             this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.CevapFalse);
             this.Controls.Add(this.LblD);
@@ -471,7 +449,6 @@ namespace SinavSistemi
         private System.Windows.Forms.PictureBox CevapFalse;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblKullanici;
         private System.Windows.Forms.Label lblDogru;
@@ -484,6 +461,5 @@ namespace SinavSistemi
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pnlSayac;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
     }
 }

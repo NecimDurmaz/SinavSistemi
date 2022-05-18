@@ -94,7 +94,7 @@ namespace SinavSistemi
         {
 
             bgl.baglanti();
-            SqlCommand kmt = new SqlCommand("Select * from Sigma where KullaniciID=@p1", bgl.baglanti());
+            SqlCommand kmt = new SqlCommand("Select * from SigmaSure where KullaniciID=@p1", bgl.baglanti());
             kmt.Parameters.AddWithValue("@p1", kullaniciID);
             SqlDataReader dr = kmt.ExecuteReader();
             if (dr.Read())

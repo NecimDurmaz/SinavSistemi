@@ -105,7 +105,7 @@ namespace SinavSistemi
             // LinkSifremiUnutum
             // 
             this.LinkSifremiUnutum.AutoSize = true;
-            this.LinkSifremiUnutum.Location = new System.Drawing.Point(309, 180);
+            this.LinkSifremiUnutum.Location = new System.Drawing.Point(306, 197);
             this.LinkSifremiUnutum.Name = "LinkSifremiUnutum";
             this.LinkSifremiUnutum.Size = new System.Drawing.Size(124, 20);
             this.LinkSifremiUnutum.TabIndex = 7;
@@ -127,7 +127,7 @@ namespace SinavSistemi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Crimson;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(455, 328);
             this.Controls.Add(this.BtnKayıtOl);
             this.Controls.Add(this.LinkSifremiUnutum);
