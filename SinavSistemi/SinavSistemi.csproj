@@ -37,7 +37,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,23 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDersKonu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDersKonu.Designer.cs">
-      <DependentUpon>frmDersKonu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmKayitDuzenle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmKayitDuzenle.Designer.cs">
-      <DependentUpon>frmKayitDuzenle.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmKullaniciKayitPaneli.cs">
       <SubType>Form</SubType>
@@ -85,29 +78,11 @@
     <Compile Include="FrmOgrenci.Designer.cs">
       <DependentUpon>FrmOgrenci.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgrenciIstatistik.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmOgrenciIstatistik.Designer.cs">
-      <DependentUpon>FrmOgrenciIstatistik.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmOgrenciSinav.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmOgrenciSinav.Designer.cs">
-      <DependentUpon>FrmOgrenciSinav.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmSifremiUnuttum.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSifremiUnuttum.Designer.cs">
       <DependentUpon>FrmSifremiUnuttum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSigmaAyari.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSigmaAyari.Designer.cs">
-      <DependentUpon>FrmSigmaAyari.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSinavSorumlusAnaMenu.cs">
       <SubType>Form</SubType>
@@ -115,29 +90,20 @@
     <Compile Include="FrmSinavSorumlusAnaMenu.Designer.cs">
       <DependentUpon>FrmSinavSorumlusAnaMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSinavSoruEkle.cs">
+    <Compile Include="FrmSinavSorumlusu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSinavSoruEkle.Designer.cs">
-      <DependentUpon>FrmSinavSoruEkle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSoruOnay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSoruOnay.Designer.cs">
-      <DependentUpon>frmSoruOnay.cs</DependentUpon>
+    <Compile Include="FrmSinavSorumlusu.Designer.cs">
+      <DependentUpon>FrmSinavSorumlusu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlBaglanti.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDersKonu.resx">
-      <DependentUpon>frmDersKonu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmKayitDuzenle.resx">
-      <DependentUpon>frmKayitDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKullaniciKayitPaneli.resx">
       <DependentUpon>FrmKullaniciKayitPaneli.cs</DependentUpon>
@@ -148,27 +114,16 @@
     <EmbeddedResource Include="FrmOgrenci.resx">
       <DependentUpon>FrmOgrenci.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgrenciIstatistik.resx">
-      <DependentUpon>FrmOgrenciIstatistik.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgrenciSinav.resx">
-      <DependentUpon>FrmOgrenciSinav.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmSifremiUnuttum.resx">
       <DependentUpon>FrmSifremiUnuttum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSigmaAyari.resx">
-      <DependentUpon>FrmSigmaAyari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSinavSorumlusAnaMenu.resx">
       <DependentUpon>FrmSinavSorumlusAnaMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSinavSoruEkle.resx">
-      <DependentUpon>FrmSinavSoruEkle.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSinavSorumlusu.resx">
+      <DependentUpon>FrmSinavSorumlusu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSoruOnay.resx">
-      <DependentUpon>frmSoruOnay.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -64,7 +64,7 @@ namespace SinavSistemi
             }
             else
             {
-                MessageBox.Show("Guvenlik sorusu ve ya cevabi yanlis tekrar deneyiniz...!!!");
+                MessageBox.Show("KnkUyusmadi");
             }
         }
 

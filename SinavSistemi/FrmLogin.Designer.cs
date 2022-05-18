@@ -62,10 +62,8 @@ namespace SinavSistemi
             // 
             this.TxtSifre.Location = new System.Drawing.Point(128, 123);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.PasswordChar = '*';
             this.TxtSifre.Size = new System.Drawing.Size(263, 26);
             this.TxtSifre.TabIndex = 2;
-            this.TxtSifre.Text = "123";
             // 
             // CmbKullaniciTipi
             // 
@@ -100,7 +98,6 @@ namespace SinavSistemi
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(263, 26);
             this.TxtMail.TabIndex = 6;
-            this.TxtMail.Text = "durmaznecim@gmail.com";
             // 
             // LinkSifremiUnutum
             // 
@@ -127,7 +124,6 @@ namespace SinavSistemi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(455, 328);
             this.Controls.Add(this.BtnKayıtOl);
             this.Controls.Add(this.LinkSifremiUnutum);
@@ -141,7 +137,7 @@ namespace SinavSistemi
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmLogin";
-            this.Text = "Login Ekrani";
+            this.Text = "FrmLogin";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

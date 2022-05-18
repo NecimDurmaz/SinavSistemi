@@ -23,24 +23,6 @@ namespace SinavSistemi
             dataGridView1.DataSource = dt;
             bgl.baglanti().Close();
         }
-        public void OnayBekleyenSorular()
-        {
-            bgl.baglanti();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from SoruuHavuzu Where SonDurum=1", bgl.baglanti());
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            bgl.baglanti().Close();
-        }
-        public void Kayitlar()
-        {
-            bgl.baglanti();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Kullanicilar", bgl.baglanti());
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            bgl.baglanti().Close();
-        }
         public FrmAdmin()
         {
             InitializeComponent();
@@ -55,48 +37,33 @@ namespace SinavSistemi
         {
             SoruHavuzuDoldur();
         }
-        string BasilanButon = " ";
+
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (BasilanButon=="OnayBekliyen")
+            bgl.baglanti();
+            int secilenindex = dataGridView1.SelectedCells[0].RowIndex;
+            int SoruId = Convert.ToInt32(dataGridView1.Rows[secilenindex].Cells[0].Value);
+            int durum = Convert.ToInt32(dataGridView1.Rows[secilenindex].Cells[11].Value);
+            DialogResult dialogResult = MessageBox.Show("Secilen sorunun durumunu değiştirmek istediğinizden emin misiniz?", "Onay Kutusu", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
             {
-
-                int secilenindex = dataGridView1.SelectedCells[0].RowIndex;
-                int SoruId = Convert.ToInt32(dataGridView1.Rows[secilenindex].Cells[0].Value);
-                frmSoruOnay frmSoru = new frmSoruOnay();
-                frmSoru.SoruID=SoruId;
-                frmSoru.Show();
+                SqlCommand komut = new SqlCommand("update SoruHavuzu set SoruDurum=@p1 where SoruID=@p2", bgl.baglanti());
+                if (durum == 1)
+                    durum = 0;
+                else
+                    durum = 1;
+                komut.Parameters.AddWithValue("@p1", durum);
+                komut.Parameters.AddWithValue("@p2", SoruId);
+                komut.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                SoruHavuzuDoldur();
             }
-            else if(BasilanButon=="Kayitlar")
+            else if (dialogResult == DialogResult.No)
             {
-                
-                int secilenindex = dataGridView1.SelectedCells[0].RowIndex;
-                int KullaniciID = Convert.ToInt32(dataGridView1.Rows[secilenindex].Cells[0].Value);
-                frmKayitDuzenle frmKayit = new frmKayitDuzenle();
-                frmKayit.KullaniciID=KullaniciID;
-                frmKayit.Show();
+                MessageBox.Show("Secilen sorunun durumunu değiştirme işlemi iptal edildi.");
             }
-
+            bgl.baglanti().Close();
         }
-
-        private void btnTumSorular_Click(object sender, EventArgs e)
-        {
-            SoruHavuzuDoldur();
-            BasilanButon="TumSorular";
-        }
-
-        private void btnOnaySoru_Click(object sender, EventArgs e)
-        {
-            OnayBekleyenSorular();
-            BasilanButon="OnayBekliyen";
-        }
-
-        private void btnKayit_Click(object sender, EventArgs e)
-        {
-            Kayitlar();
-            BasilanButon="Kayitlar";
-        }
-
-     
     }
 }
