@@ -46,10 +46,10 @@ namespace SinavSistemi
         public void Guvenlik()
         {
             SqlCommand kmt = new SqlCommand("select * from Kullanicilar Where GuvenlikSoruID=@p1 and GuvenlikSorusuCevap=@p2 and Mail=@p3 and KullaniciTipID=@p4", bgl.baglanti());
-            kmt.Parameters.AddWithValue("@p1", Convert.ToInt32(cmbGuvenlikSorusu.SelectedIndex + 1));
+            kmt.Parameters.AddWithValue("@p1", Convert.ToInt32(cmbGuvenlikSorusu.SelectedValue));
             kmt.Parameters.AddWithValue("@p2", TxtGuncelikSorusuCevap.Text);
             kmt.Parameters.AddWithValue("@p3", TxtMail.Text);
-            kmt.Parameters.AddWithValue("@p4", Convert.ToInt32(CmbKullaniciTipi.SelectedIndex + 1));
+            kmt.Parameters.AddWithValue("@p4", Convert.ToInt32(CmbKullaniciTipi.SelectedValue));
             SqlDataReader dr = kmt.ExecuteReader();
             if (dr.Read())
             {

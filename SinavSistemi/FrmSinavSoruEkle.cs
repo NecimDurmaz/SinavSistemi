@@ -64,7 +64,7 @@ namespace SinavSistemi
             TxtResim.Text = openFileDialog1.FileName;
         }
 
-        
+      
         private void BtnSoruEkle_Click(object sender, EventArgs e)
         {
             bgl.baglanti();

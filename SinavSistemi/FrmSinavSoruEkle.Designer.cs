@@ -51,7 +51,6 @@ namespace SinavSistemi
             this.BtnSoruEkle = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.CmbZorlukSeviyesi = new System.Windows.Forms.ComboBox();
-            this.BtnTemizle = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -272,17 +271,6 @@ namespace SinavSistemi
             this.CmbZorlukSeviyesi.Size = new System.Drawing.Size(191, 29);
             this.CmbZorlukSeviyesi.TabIndex = 21;
             // 
-            // BtnTemizle
-            // 
-            this.BtnTemizle.BackColor = System.Drawing.Color.IndianRed;
-            this.BtnTemizle.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTemizle.Location = new System.Drawing.Point(346, 579);
-            this.BtnTemizle.Name = "BtnTemizle";
-            this.BtnTemizle.Size = new System.Drawing.Size(157, 47);
-            this.BtnTemizle.TabIndex = 23;
-            this.BtnTemizle.Text = "Temizle";
-            this.BtnTemizle.UseVisualStyleBackColor = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -303,7 +291,6 @@ namespace SinavSistemi
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(711, 660);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.BtnTemizle);
             this.Controls.Add(this.CmbZorlukSeviyesi);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.BtnSoruEkle);
@@ -361,7 +348,6 @@ namespace SinavSistemi
         private System.Windows.Forms.Button BtnSoruEkle;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox CmbZorlukSeviyesi;
-        private System.Windows.Forms.Button BtnTemizle;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

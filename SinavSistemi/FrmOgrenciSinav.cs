@@ -42,6 +42,7 @@ namespace SinavSistemi
         int OncedenYanlisCozulenSorularSayac;
         int[] OnaylanmayanSorular = new int[0];
         int OnaylanmayanSorularSayac;
+        public string Mail;
         public int KullaniciID
         {
             get { return kullaniciID; }
@@ -343,7 +344,7 @@ namespace SinavSistemi
                             durum = true;
                         }
                     }
-
+                    
                     //eğer daha önce o ID'de soru olusturulmamışsa
                     if (!durum)
                     {
@@ -818,6 +819,7 @@ namespace SinavSistemi
             FrmOgrenci frmOgrenci = new FrmOgrenci();
             frmOgrenci.KullaniciAD=kullaniciAD;
             frmOgrenci.KullaniciID=kullaniciID;
+            frmOgrenci.Mail=Mail;
             frmOgrenci.Show();
             this.Hide();
         }

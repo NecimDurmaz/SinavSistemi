@@ -27,12 +27,12 @@ namespace SinavSistemi
             SqlDataReader dr = kmt.ExecuteReader();
             if (dr.Read())
             {
-                txtSigma1.Text = Convert.ToInt32(dr[2]).ToString();
-                txtSigma2.Text = Convert.ToInt32(dr[3]).ToString();
-                txtSigma3.Text = Convert.ToInt32(dr[4]).ToString();
-                txtSigma4.Text = Convert.ToInt32(dr[5]).ToString();
-                txtSigma5.Text = Convert.ToInt32(dr[6]).ToString();
-                txtSigma6.Text = Convert.ToInt32(dr[7]).ToString();
+                txtSigma1.Text = Convert.ToInt32(dr[7]).ToString();
+                txtSigma2.Text = Convert.ToInt32(dr[6]).ToString();
+                txtSigma3.Text = Convert.ToInt32(dr[5]).ToString();
+                txtSigma4.Text = Convert.ToInt32(dr[4]).ToString();
+                txtSigma5.Text = Convert.ToInt32(dr[3]).ToString();
+                txtSigma6.Text = Convert.ToInt32(dr[2]).ToString();
             }
             dr.Close();
             bgl.baglanti().Close();

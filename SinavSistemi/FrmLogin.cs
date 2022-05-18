@@ -36,6 +36,7 @@ namespace SinavSistemi
                 if (CmbKullaniciTipi.SelectedIndex==0)
                 {
                     FrmAdmin frmAdmin = new FrmAdmin();
+                    frmAdmin.Mail=TxtMail.Text;
                     frmAdmin.Show();
                     this.Hide();
                 }
@@ -94,6 +95,11 @@ namespace SinavSistemi
             FrmSifremiUnuttum fr = new FrmSifremiUnuttum();
             fr.Show();
            
+        }
+
+        private void TxtMail_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

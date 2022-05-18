@@ -46,8 +46,8 @@ namespace SinavSistemi
             kmt.Parameters.AddWithValue("@p3", TxtKullaniciAdi.Text);
             kmt.Parameters.AddWithValue("@p4", TxtSifre.Text);
             kmt.Parameters.AddWithValue("@p5", TxtMail.Text);
-            kmt.Parameters.AddWithValue("@p6", CmbKullaniciTip.SelectedIndex+1);
-            kmt.Parameters.AddWithValue("@p7", CmbGuvenlikSorusu.SelectedIndex);
+            kmt.Parameters.AddWithValue("@p6", CmbKullaniciTip.SelectedValue);
+            kmt.Parameters.AddWithValue("@p7", CmbGuvenlikSorusu.SelectedValue);
             kmt.Parameters.AddWithValue("@p8", TxtGuvenlikCevap.Text);
             kmt.ExecuteNonQuery();
             MessageBox.Show("Basariyla kayit oldunuz...!!!");

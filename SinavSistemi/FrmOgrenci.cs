@@ -54,6 +54,7 @@ namespace SinavSistemi
             frmOgrenci.KullaniciID=KullaniciID;
             frmOgrenci.KullaniciAD=KullaniciAD;
             frmOgrenci.Sinavturu="NormalSinav";
+            frmOgrenci.Mail=lblMail.Text;
             frmOgrenci.Show();
             this.Hide();
         }
@@ -71,6 +72,7 @@ namespace SinavSistemi
             FrmOgrenciSinav frmOgrenci = new FrmOgrenciSinav();
             frmOgrenci.KullaniciID=KullaniciID;
             frmOgrenci.KullaniciAD=KullaniciAD;
+            frmOgrenci.Mail=lblMail.Text;
             frmOgrenci.Sinavturu="OzelSinav";
             frmOgrenci.Show();
             this.Hide();

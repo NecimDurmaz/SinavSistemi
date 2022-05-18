@@ -49,7 +49,7 @@ namespace SinavSistemi
         {
 
             bgl.baglanti();
-            SqlCommand kmt = new SqlCommand("update from Kullanicilar  set KullaniciIsim=@p1,KullaniciSoyisim=@p2,KullaniciAdi=@p3,Sifre=@p4,Mail=@p5,KullaniciTipID=@p6,GuvenlikSoruID=@p7,GuvenlikSorusuCevap=@p8", bgl.baglanti());
+            SqlCommand kmt = new SqlCommand("update Kullanicilar  set KullaniciIsim=@p1,KullaniciSoyisim=@p2,KullaniciAdi=@p3,Sifre=@p4,Mail=@p5,KullaniciTipID=@p6,GuvenlikSoruID=@p7,GuvenlikSorusuCevap=@p8 where KullaniciID=@p9", bgl.baglanti());
             kmt.Parameters.AddWithValue("@p1", TxtKullaniciIsim.Text);
             kmt.Parameters.AddWithValue("@p2", TxtKullaniciSoyisim.Text);
             kmt.Parameters.AddWithValue("@p3", TxtKullaniciAdi.Text);
@@ -58,6 +58,7 @@ namespace SinavSistemi
             kmt.Parameters.AddWithValue("@p6", CmbKullaniciTip.SelectedIndex+1);
             kmt.Parameters.AddWithValue("@p7", CmbGuvenlikSorusu.SelectedIndex);
             kmt.Parameters.AddWithValue("@p8", TxtGuvenlikCevap.Text);
+            kmt.Parameters.AddWithValue("@p9", KullaniciID);
             kmt.ExecuteNonQuery();
             MessageBox.Show("Kullanici Guncellendi.!!!!!");
             bgl.baglanti().Close();

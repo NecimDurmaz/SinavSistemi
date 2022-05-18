@@ -50,7 +50,7 @@ namespace SinavSistemi
             this.dataGridView1.Location = new System.Drawing.Point(258, -3);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(874, 764);
+            this.dataGridView1.Size = new System.Drawing.Size(988, 764);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -109,7 +109,7 @@ namespace SinavSistemi
             this.label1.Size = new System.Drawing.Size(80, 42);
             this.label1.TabIndex = 7;
             this.label1.Text = "Admin\r\n--------------\r\n";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // label2
             // 
@@ -156,7 +156,7 @@ namespace SinavSistemi
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1133, 757);
+            this.ClientSize = new System.Drawing.Size(1244, 757);
             this.Controls.Add(this.LblSoyad);
             this.Controls.Add(this.LblAd);
             this.Controls.Add(this.label3);

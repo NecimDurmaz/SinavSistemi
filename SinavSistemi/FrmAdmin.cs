@@ -16,6 +16,7 @@ namespace SinavSistemi
         SqlBaglanti bgl = new SqlBaglanti();
         public void SoruHavuzuDoldur()
         {
+            // tum soruları data grid cekme
             bgl.baglanti();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * from SoruuHavuzu", bgl.baglanti());
@@ -25,15 +26,17 @@ namespace SinavSistemi
         }
         public void OnayBekleyenSorular()
         {
+            //onay bekliyen soruları cekme
             bgl.baglanti();
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from SoruuHavuzu Where SonDurum=1", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * from SoruuHavuzu Where SonDurum=0", bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             bgl.baglanti().Close();
         }
         public void Kayitlar()
         {
+            //kayitlari cekme
             bgl.baglanti();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * from Kullanicilar", bgl.baglanti());
@@ -45,15 +48,35 @@ namespace SinavSistemi
         {
             InitializeComponent();
         }
+        private string mail;
 
-        private void label1_Click(object sender, EventArgs e)
+        public string Mail
         {
+            get { return mail; }
+            set { mail = value; }
+        }
 
+        public void IsimSoyAD()
+        {
+            bgl.baglanti();
+            SqlCommand kmt= new SqlCommand("Select * from Kullanicilar where Mail=@p1",bgl.baglanti());
+            kmt.Parameters.AddWithValue("@p1", mail);
+            SqlDataReader dr = kmt.ExecuteReader();
+            if (dr.Read())
+            {
+                LblAd.Text=(string)dr[1];
+                LblSoyad.Text=(string)dr[2];
+            }
+            dr.Close();
+            bgl.baglanti().Close();
         }
 
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             SoruHavuzuDoldur();
+            IsimSoyAD();
+
+
         }
         string BasilanButon = " ";
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

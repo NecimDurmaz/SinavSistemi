@@ -65,7 +65,6 @@ namespace SinavSistemi
             this.TxtSifre.PasswordChar = '*';
             this.TxtSifre.Size = new System.Drawing.Size(263, 26);
             this.TxtSifre.TabIndex = 2;
-            this.TxtSifre.Text = "123";
             // 
             // CmbKullaniciTipi
             // 
@@ -100,7 +99,7 @@ namespace SinavSistemi
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(263, 26);
             this.TxtMail.TabIndex = 6;
-            this.TxtMail.Text = "durmaznecim@gmail.com";
+            this.TxtMail.TextChanged += new System.EventHandler(this.TxtMail_TextChanged);
             // 
             // LinkSifremiUnutum
             // 
@@ -141,7 +140,7 @@ namespace SinavSistemi
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmLogin";
-            this.Text = "Login Ekrani";
+            this.Text = "  Login Ekranı";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

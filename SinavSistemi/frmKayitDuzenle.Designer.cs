@@ -52,12 +52,12 @@
             // 
             this.BtnKayıtOl.BackColor = System.Drawing.Color.Chartreuse;
             this.BtnKayıtOl.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnKayıtOl.Location = new System.Drawing.Point(266, 474);
+            this.BtnKayıtOl.Location = new System.Drawing.Point(273, 474);
             this.BtnKayıtOl.Margin = new System.Windows.Forms.Padding(4);
             this.BtnKayıtOl.Name = "BtnKayıtOl";
             this.BtnKayıtOl.Size = new System.Drawing.Size(225, 50);
             this.BtnKayıtOl.TabIndex = 33;
-            this.BtnKayıtOl.Text = "Kayıt Ol";
+            this.BtnKayıtOl.Text = "Kayıt Duzenle";
             this.BtnKayıtOl.UseVisualStyleBackColor = false;
             this.BtnKayıtOl.Click += new System.EventHandler(this.BtnKayıtOl_Click);
             // 
