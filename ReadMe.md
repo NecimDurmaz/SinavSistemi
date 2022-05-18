@@ -9,7 +9,7 @@
 
 -[Mehmet Yıldırım](https://github.com/MehmetYildirimDev)
 
-##[Trello](https://trello.com/b/PmCxoeQY/yazılım-yapımı)
+## [Trello](https://trello.com/b/PmCxoeQY/yazılım-yapımı)
 
 ## A-) Programın çalışma işleyişi;
 
