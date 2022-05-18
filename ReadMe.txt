@@ -1,10 +1,10 @@
 Sınav Otomasyonu
 
 Hazırlayanlar;
-Necim Durmaz
-Mustafa Yenal
-Yavuz Selim Göç
-Mehmet Yıldırım
+[Necim Durmaz](https://github.com/NecimDurmaz)
+[Mustafa Yenal](https://github.com/2129mustafa)
+[Yavuz Selim Göç](https://github.com/YavuzSelimGoc)
+[Mehmet Yıldırım](https://github.com/MehmetYildirimDev)
 
 A-) Programın çalışma işleyişi;
 
