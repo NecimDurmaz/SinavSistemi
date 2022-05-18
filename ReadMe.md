@@ -2,8 +2,11 @@
 
 ## Hazırlayanlar;
 [Necim Durmaz](https://github.com/NecimDurmaz)
+
 [Mustafa Yenal](https://github.com/2129mustafa)
+
 [Yavuz Selim Göç](https://github.com/YavuzSelimGoc)
+
 [Mehmet Yıldırım](https://github.com/MehmetYildirimDev)
 
 ## A-) Programın çalışma işleyişi;
@@ -16,7 +19,7 @@
 
 ## C-) Öğrenci;
 
-## 2-) Çözülen sorulardan Sigma 6 zamanlarına uygun şekilde gelmesi gereken sorular veri tabanından çekiliyor. Bu sorulara ek olarak 10 tane rastgele soru eklenip sınav bu soruların zorluğuna göre zamanı otomatik oluşturup sınav başlıyor. Soru istenilirse boş bırakılabiliyor ve istenilen soruya geri dönülebiliyor. Soruyu cevapladığınız takdirde sorunun doğru cevabı anlık olarak gösteriliyor. Sınav bitirmek istediğinizde veya süre bitince soruların cevap butonları kapanıyor ve sınav sonucunuz geliyor. İstenilirse soruları gezerek soruların cevabını ve verdiğiniz cevaplara bakılabiliyor. Sınav bittiğinde soruya verilen doğru, yanlış ve boş cevaplara göre veri tabanı güncelleniyor.
+2-) Çözülen sorulardan Sigma 6 zamanlarına uygun şekilde gelmesi gereken sorular veri tabanından çekiliyor. Bu sorulara ek olarak 10 tane rastgele soru eklenip sınav bu soruların zorluğuna göre zamanı otomatik oluşturup sınav başlıyor. Soru istenilirse boş bırakılabiliyor ve istenilen soruya geri dönülebiliyor. Soruyu cevapladığınız takdirde sorunun doğru cevabı anlık olarak gösteriliyor. Sınav bitirmek istediğinizde veya süre bitince soruların cevap butonları kapanıyor ve sınav sonucunuz geliyor. İstenilirse soruları gezerek soruların cevabını ve verdiğiniz cevaplara bakılabiliyor. Sınav bittiğinde soruya verilen doğru, yanlış ve boş cevaplara göre veri tabanı güncelleniyor.
 3-) İstenilirse en son yanlış çözülen sorulardan süre bazlı olmayan bir sınav oluşturulabiliyor.
 4-) İstatistik kısmından tüm konulardaki doğru, yanlış ve boş sayısını görüp yüzdelik olarak kaç doğru yaptığınızın çıktısı alınabiliyor. İstenilen dersin konusundaki sorulardaki doğru, yanlış ve boş sayınızı grafikte görülüyor ve o konudaki toplam doğru, yanlış ve boş sayısı pasta grafikte gösteriliyor.
 
