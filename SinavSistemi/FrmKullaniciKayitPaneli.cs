@@ -18,8 +18,27 @@ namespace SinavSistemi
             InitializeComponent();
         }
         SqlBaglanti bgl = new SqlBaglanti();
-        private void BtnKayıtOl_Click(object sender, EventArgs e)
+        int KullaniciID;
+        bool KullaniciKayitDurum;
+
+        public bool KayitSorgu()
         {
+            //Kayit sorgulama
+            KullaniciKayitDurum=false;
+            bgl.baglanti();
+            SqlCommand Kullanicikmt = new SqlCommand("Select Mail from Kullanicilar where Mail=@p1", bgl.baglanti());
+            Kullanicikmt.Parameters.AddWithValue("@p1", TxtMail.Text);
+            SqlDataReader dr = Kullanicikmt.ExecuteReader();
+            if (dr.Read())
+                KullaniciKayitDurum=true;
+            dr.Close();
+            bgl.baglanti().Close();
+            return KullaniciKayitDurum;
+        }
+        
+        public void KullaniciEkleme()
+        {
+
             bgl.baglanti();
             SqlCommand kmt = new SqlCommand("insert into Kullanicilar (KullaniciIsim,KullaniciSoyisim,KullaniciAdi,Sifre,Mail,KullaniciTipID,GuvenlikSoruID,GuvenlikSorusuCevap) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", bgl.baglanti());
             kmt.Parameters.AddWithValue("@p1", TxtKullaniciIsim.Text);
@@ -27,12 +46,61 @@ namespace SinavSistemi
             kmt.Parameters.AddWithValue("@p3", TxtKullaniciAdi.Text);
             kmt.Parameters.AddWithValue("@p4", TxtSifre.Text);
             kmt.Parameters.AddWithValue("@p5", TxtMail.Text);
-            kmt.Parameters.AddWithValue("@p6", CmbKullaniciTip.SelectedIndex);
+            kmt.Parameters.AddWithValue("@p6", CmbKullaniciTip.SelectedIndex+1);
             kmt.Parameters.AddWithValue("@p7", CmbGuvenlikSorusu.SelectedIndex);
             kmt.Parameters.AddWithValue("@p8", TxtGuvenlikCevap.Text);
             kmt.ExecuteNonQuery();
-            MessageBox.Show("Okey");
+            MessageBox.Show("Basariyla kayit oldunuz...!!!");
             bgl.baglanti().Close();
+        }
+        public void KullaniciIDAlma()
+        {
+            //Kullanici ID alma
+            bgl.baglanti();
+            SqlCommand IDkmt = new SqlCommand("Select KullaniciID from Kullanicilar where Mail=@p1", bgl.baglanti());
+            IDkmt.Parameters.AddWithValue("@p1", TxtMail.Text);
+            SqlDataReader dr = IDkmt.ExecuteReader();
+            if (dr.Read())
+                KullaniciID=(int)dr[0];
+            dr.Close();
+            bgl.baglanti().Close();
+        }
+
+        public void SigmaDoldurma()
+        {
+            //  otomatik Sigma 6 doldurma
+
+            bgl.baglanti();
+            SqlCommand SigmaKmt = new SqlCommand("insert into Sigma (Sigma1,Sigma2,Sigma3,Sigma4,Sigma5,Sigma6,KullaniciID) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)  ", bgl.baglanti());
+            SigmaKmt.Parameters.AddWithValue("@p1", 1);
+            SigmaKmt.Parameters.AddWithValue("@p2", 2);
+            SigmaKmt.Parameters.AddWithValue("@p3", 7);
+            SigmaKmt.Parameters.AddWithValue("@p4", 30);
+            SigmaKmt.Parameters.AddWithValue("@p5", 60);
+            SigmaKmt.Parameters.AddWithValue("@p6", 180);
+            SigmaKmt.Parameters.AddWithValue("@p7", KullaniciID);
+            SigmaKmt.ExecuteNonQuery();
+            bgl.baglanti().Close();
+        }
+        private void BtnKayıtOl_Click(object sender, EventArgs e)
+        {
+            if (!KayitSorgu())
+            {
+
+                KullaniciEkleme();
+
+                //ogrenci ise
+                if (CmbKullaniciTip.SelectedIndex+1==2)
+                {
+                    KullaniciIDAlma();
+                    SigmaDoldurma();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Zaten Kayitli Mail lütfen tekrar deneyiniz..!!");
+            }
         }
         public void GuvenlikSorulari() //combobox'a soruları çekme
         {
@@ -65,5 +133,7 @@ namespace SinavSistemi
             GuvenlikSorulari();
             KullaniciTipleri();
         }
+
+       
     }
 }

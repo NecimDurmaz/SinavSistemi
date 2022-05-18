@@ -1,5 +1,4 @@
-﻿
-namespace SinavSistemi
+﻿namespace SinavSistemi
 {
     partial class FrmOgrenci
     {
@@ -29,287 +28,129 @@ namespace SinavSistemi
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.BtnA = new System.Windows.Forms.Button();
-            this.BtnB = new System.Windows.Forms.Button();
-            this.BtnC = new System.Windows.Forms.Button();
-            this.BtnD = new System.Windows.Forms.Button();
-            this.BtnSonraki = new System.Windows.Forms.Button();
-            this.BtnOnceki = new System.Windows.Forms.Button();
+            this.btnSinavBaslat = new System.Windows.Forms.Button();
+            this.btnSigmaAyar = new System.Windows.Forms.Button();
+            this.btnEksik = new System.Windows.Forms.Button();
+            this.btnIstatistik = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblIsim = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.CevapTrue = new System.Windows.Forms.PictureBox();
-            this.LblA = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LblB = new System.Windows.Forms.Label();
-            this.LblC = new System.Windows.Forms.Label();
-            this.LblD = new System.Windows.Forms.Label();
-            this.CevapFalse = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.CevapTrue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CevapFalse)).BeginInit();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // btnSinavBaslat
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(398, 181);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.btnSinavBaslat.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSinavBaslat.Location = new System.Drawing.Point(223, 33);
+            this.btnSinavBaslat.Name = "btnSinavBaslat";
+            this.btnSinavBaslat.Size = new System.Drawing.Size(151, 74);
+            this.btnSinavBaslat.TabIndex = 0;
+            this.btnSinavBaslat.Text = "Sınavı Başlat";
+            this.btnSinavBaslat.UseVisualStyleBackColor = true;
+            this.btnSinavBaslat.Click += new System.EventHandler(this.btnSinavBaslat_Click);
             // 
-            // BtnA
+            // btnSigmaAyar
             // 
-            this.BtnA.Location = new System.Drawing.Point(12, 208);
-            this.BtnA.Name = "BtnA";
-            this.BtnA.Size = new System.Drawing.Size(181, 47);
-            this.BtnA.TabIndex = 1;
-            this.BtnA.Text = "A";
-            this.BtnA.UseVisualStyleBackColor = true;
-            this.BtnA.Click += new System.EventHandler(this.BtnA_Click);
+            this.btnSigmaAyar.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSigmaAyar.Location = new System.Drawing.Point(394, 33);
+            this.btnSigmaAyar.Name = "btnSigmaAyar";
+            this.btnSigmaAyar.Size = new System.Drawing.Size(151, 74);
+            this.btnSigmaAyar.TabIndex = 1;
+            this.btnSigmaAyar.Text = "Sigma Sıklık Süresi Ayarlama";
+            this.btnSigmaAyar.UseVisualStyleBackColor = true;
+            this.btnSigmaAyar.Click += new System.EventHandler(this.btnSigmaAyar_Click);
             // 
-            // BtnB
+            // btnEksik
             // 
-            this.BtnB.Location = new System.Drawing.Point(12, 261);
-            this.BtnB.Name = "BtnB";
-            this.BtnB.Size = new System.Drawing.Size(181, 47);
-            this.BtnB.TabIndex = 2;
-            this.BtnB.Text = "B";
-            this.BtnB.UseVisualStyleBackColor = true;
-            this.BtnB.Click += new System.EventHandler(this.BtnB_Click);
+            this.btnEksik.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEksik.Location = new System.Drawing.Point(223, 153);
+            this.btnEksik.Name = "btnEksik";
+            this.btnEksik.Size = new System.Drawing.Size(151, 74);
+            this.btnEksik.TabIndex = 3;
+            this.btnEksik.Text = "Eksik Konular hakkında sinav";
+            this.btnEksik.UseVisualStyleBackColor = true;
+            this.btnEksik.Click += new System.EventHandler(this.btnEksik_Click);
             // 
-            // BtnC
+            // btnIstatistik
             // 
-            this.BtnC.Location = new System.Drawing.Point(12, 309);
-            this.BtnC.Name = "BtnC";
-            this.BtnC.Size = new System.Drawing.Size(181, 47);
-            this.BtnC.TabIndex = 3;
-            this.BtnC.Text = "C";
-            this.BtnC.UseVisualStyleBackColor = true;
-            this.BtnC.Click += new System.EventHandler(this.BtnC_Click);
-            // 
-            // BtnD
-            // 
-            this.BtnD.Location = new System.Drawing.Point(12, 362);
-            this.BtnD.Name = "BtnD";
-            this.BtnD.Size = new System.Drawing.Size(181, 47);
-            this.BtnD.TabIndex = 4;
-            this.BtnD.Text = "D";
-            this.BtnD.UseVisualStyleBackColor = true;
-            this.BtnD.Click += new System.EventHandler(this.BtnD_Click);
-            // 
-            // BtnSonraki
-            // 
-            this.BtnSonraki.Location = new System.Drawing.Point(12, 419);
-            this.BtnSonraki.Name = "BtnSonraki";
-            this.BtnSonraki.Size = new System.Drawing.Size(116, 33);
-            this.BtnSonraki.TabIndex = 5;
-            this.BtnSonraki.Text = "Sonraki";
-            this.BtnSonraki.UseVisualStyleBackColor = true;
-            this.BtnSonraki.Click += new System.EventHandler(this.BtnSonraki_Click);
-            this.BtnSonraki.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BtnSonraki_MouseClick);
-            // 
-            // BtnOnceki
-            // 
-            this.BtnOnceki.Location = new System.Drawing.Point(156, 419);
-            this.BtnOnceki.Name = "BtnOnceki";
-            this.BtnOnceki.Size = new System.Drawing.Size(116, 33);
-            this.BtnOnceki.TabIndex = 6;
-            this.BtnOnceki.Text = "Önceki";
-            this.BtnOnceki.UseVisualStyleBackColor = true;
-            this.BtnOnceki.Click += new System.EventHandler(this.BtnOnceki_Click);
+            this.btnIstatistik.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIstatistik.Location = new System.Drawing.Point(394, 153);
+            this.btnIstatistik.Name = "btnIstatistik";
+            this.btnIstatistik.Size = new System.Drawing.Size(151, 74);
+            this.btnIstatistik.TabIndex = 4;
+            this.btnIstatistik.Text = "İstatistik";
+            this.btnIstatistik.UseVisualStyleBackColor = true;
+            this.btnIstatistik.Click += new System.EventHandler(this.btnIstatistik_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(741, 78);
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Süre :";
+            this.label1.Size = new System.Drawing.Size(173, 54);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "    OGRENCI\r\n-----------------------\r\n";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(825, 78);
+            this.label2.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "0";
+            this.label2.Size = new System.Drawing.Size(134, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "KullaniciAdi";
             // 
-            // label3
+            // lblIsim
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(825, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "0";
+            this.lblIsim.AutoSize = true;
+            this.lblIsim.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIsim.Location = new System.Drawing.Point(8, 120);
+            this.lblIsim.Name = "lblIsim";
+            this.lblIsim.Size = new System.Drawing.Size(47, 23);
+            this.lblIsim.TabIndex = 7;
+            this.lblIsim.Text = "lblAd";
+            // 
+            // lblMail
+            // 
+            this.lblMail.AutoSize = true;
+            this.lblMail.Font = new System.Drawing.Font("Corbel Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMail.Location = new System.Drawing.Point(8, 204);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(59, 23);
+            this.lblMail.TabIndex = 9;
+            this.lblMail.Text = "lblMail";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(697, 111);
+            this.label4.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 169);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Kalan Süre :";
-            // 
-            // CevapTrue
-            // 
-            this.CevapTrue.Image = global::SinavSistemi.Properties.Resources.green_light;
-            this.CevapTrue.Location = new System.Drawing.Point(745, 415);
-            this.CevapTrue.Name = "CevapTrue";
-            this.CevapTrue.Size = new System.Drawing.Size(169, 141);
-            this.CevapTrue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CevapTrue.TabIndex = 12;
-            this.CevapTrue.TabStop = false;
-            this.CevapTrue.Visible = false;
-            // 
-            // LblA
-            // 
-            this.LblA.AutoSize = true;
-            this.LblA.Location = new System.Drawing.Point(223, 221);
-            this.LblA.Name = "LblA";
-            this.LblA.Size = new System.Drawing.Size(0, 20);
-            this.LblA.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(428, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 181);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // LblB
-            // 
-            this.LblB.AutoSize = true;
-            this.LblB.Location = new System.Drawing.Point(223, 274);
-            this.LblB.Name = "LblB";
-            this.LblB.Size = new System.Drawing.Size(0, 20);
-            this.LblB.TabIndex = 15;
-            // 
-            // LblC
-            // 
-            this.LblC.AutoSize = true;
-            this.LblC.Location = new System.Drawing.Point(223, 322);
-            this.LblC.Name = "LblC";
-            this.LblC.Size = new System.Drawing.Size(0, 20);
-            this.LblC.TabIndex = 15;
-            // 
-            // LblD
-            // 
-            this.LblD.AutoSize = true;
-            this.LblD.Location = new System.Drawing.Point(223, 368);
-            this.LblD.Name = "LblD";
-            this.LblD.Size = new System.Drawing.Size(0, 20);
-            this.LblD.TabIndex = 15;
-            // 
-            // CevapFalse
-            // 
-            this.CevapFalse.Image = global::SinavSistemi.Properties.Resources.redgif;
-            this.CevapFalse.Location = new System.Drawing.Point(745, 415);
-            this.CevapFalse.Name = "CevapFalse";
-            this.CevapFalse.Size = new System.Drawing.Size(169, 141);
-            this.CevapFalse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CevapFalse.TabIndex = 16;
-            this.CevapFalse.TabStop = false;
-            this.CevapFalse.Visible = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // labelControl1
-            // 
-            //this.labelControl1.Location = new System.Drawing.Point(502, 357);
-            //this.labelControl1.Name = "labelControl1";
-            //this.labelControl1.Size = new System.Drawing.Size(63, 13);
-            //this.labelControl1.TabIndex = 17;
-            //this.labelControl1.Text = "labelControl1";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(22, 481);
-            this.progressBar1.Maximum = 45;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(673, 40);
-            this.progressBar1.TabIndex = 18;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(650, 252);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(644, 309);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "label6";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(309, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 33);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Sınavı Bitir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.Size = new System.Drawing.Size(54, 21);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Mail";
             // 
             // FrmOgrenci
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 558);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.progressBar1);
-            //this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.CevapFalse);
-            this.Controls.Add(this.LblD);
-            this.Controls.Add(this.LblC);
-            this.Controls.Add(this.LblB);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.LblA);
-            this.Controls.Add(this.CevapTrue);
-            this.Controls.Add(this.label3);
+            this.BackColor = System.Drawing.Color.Cyan;
+            this.ClientSize = new System.Drawing.Size(578, 274);
+            this.Controls.Add(this.lblMail);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblIsim);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnOnceki);
-            this.Controls.Add(this.BtnSonraki);
-            this.Controls.Add(this.BtnD);
-            this.Controls.Add(this.BtnC);
-            this.Controls.Add(this.BtnB);
-            this.Controls.Add(this.BtnA);
-            this.Controls.Add(this.richTextBox1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.btnIstatistik);
+            this.Controls.Add(this.btnEksik);
+            this.Controls.Add(this.btnSigmaAyar);
+            this.Controls.Add(this.btnSinavBaslat);
             this.Name = "FrmOgrenci";
-            this.Text = "FrmOgrenci";
+            this.Text = "Ogrenci Ekranı";
             this.Load += new System.EventHandler(this.FrmOgrenci_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CevapTrue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CevapFalse)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,28 +158,14 @@ namespace SinavSistemi
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button BtnA;
-        private System.Windows.Forms.Button BtnB;
-        private System.Windows.Forms.Button BtnC;
-        private System.Windows.Forms.Button BtnD;
-        private System.Windows.Forms.Button BtnSonraki;
-        private System.Windows.Forms.Button BtnOnceki;
+        private System.Windows.Forms.Button btnSinavBaslat;
+        private System.Windows.Forms.Button btnSigmaAyar;
+        private System.Windows.Forms.Button btnEksik;
+        private System.Windows.Forms.Button btnIstatistik;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblIsim;
+        private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox CevapTrue;
-        private System.Windows.Forms.Label LblA;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label LblB;
-        private System.Windows.Forms.Label LblC;
-        private System.Windows.Forms.Label LblD;
-        private System.Windows.Forms.PictureBox CevapFalse;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
     }
 }
