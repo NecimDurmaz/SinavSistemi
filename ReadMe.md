@@ -1,13 +1,13 @@
 # Sınav Otomasyonu
 
 ## Hazırlayanlar;
-[Necim Durmaz](https://github.com/NecimDurmaz)
+-[Necim Durmaz](https://github.com/NecimDurmaz)
 
-[Mustafa Yenal](https://github.com/2129mustafa)
+-[Mustafa Yenal](https://github.com/2129mustafa)
 
-[Yavuz Selim Göç](https://github.com/YavuzSelimGoc)
+-[Yavuz Selim Göç](https://github.com/YavuzSelimGoc)
 
-[Mehmet Yıldırım](https://github.com/MehmetYildirimDev)
+-[Mehmet Yıldırım](https://github.com/MehmetYildirimDev)
 
 ## A-) Programın çalışma işleyişi;
 
