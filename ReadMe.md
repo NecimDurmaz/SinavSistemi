@@ -3,7 +3,7 @@
 ## Hazırlayanlar;
 -[Necim Durmaz](https://github.com/NecimDurmaz)
 
--[Mustafa Yenal](https://github.com/2129mustafa)
+-[Mustafa Yenal](https://github.com/MustafaYenal)
 
 -[Yavuz Selim Göç](https://github.com/YavuzSelimGoc)
 
